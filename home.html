@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food</title>
+    <link rel="stylesheet" href="./asset/css/styleDetail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="modal">
+      <div class="modal-close-overlay"></div>
+
+      <div class="modal-content">
+        <button class="modal-close-btn">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <div class="newsletter">
+          <div class="newsletter-header">
+            <h3 class="newsletter-title">saved items</h3>
+          </div>
+          <table class="save">
+            <tr>
+              <td>
+                <img src="./asset/images/products/jewellery-2.jpg" alt="" />
+              </td>
+              <td>Name</td>
+              <td>$1000</td>
+              <td>
+                <button class="save_btn">
+                  +<ion-icon name="cart-outline"></ion-icon>
+                </button>
+              </td>
+              <td>
+                <span class="icon"
+                  ><ion-icon name="trash-outline"></ion-icon
+                ></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-close-overlay"></div>
+
+      <div class="modal-content">
+        <button class="modal-close-btn">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <div class="newsletter">
+          <div class="newsletter-header">
+            <h3 class="newsletter-title">Cart (4 item)</h3>
+          </div>
+
+          <div class="cartAndCheck">
+            <div class="cart">
+              <div class="cart-title">
+                <h3>Pickup or delivery from store, as soon as Today</h3>
+              </div>
+              <div class="line"></div>
+
+              <div class="all-carts">
+                <div class="cart-card">
+                  <span class="cart-tag">Best Seller</span>
+                  <div class="cart-item">
+                    <div class="cart-detail">
+                      <img
+                        src="./asset/images/products/party-wear-1.jpg"
+                        alt=""
+                      />
+                      <div class="cart-name">
+                        <h3>name</h3>
+                        <span>100gram</span>
+                      </div>
+                    </div>
+                    <p class="cart-price">$400</p>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#">Remove</a>
+
+                    <div class="quantity-field">
+                      <button
+                        class="value-button decrease-button"
+                        onclick="decreaseValue(this)"
+                        title="Azalt"
+                      >
+                        -
+                      </button>
+                      <div class="number">0</div>
+                      <button
+                        class="value-button increase-button"
+                        onclick="increaseValue(this, 5)"
+                        title="Arrtır"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="cart-card">
+                  <span class="cart-tag">Best Seller</span>
+                  <div class="cart-item">
+                    <div class="cart-detail">
+                      <img
+                        src="./asset/images/products/party-wear-1.jpg"
+                        alt=""
+                      />
+                      <div class="cart-name">
+                        <h3>name</h3>
+                        <span>100gram</span>
+                      </div>
+                    </div>
+                    <p class="cart-price">$400</p>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#">Remove</a>
+
+                    <div class="quantity-field">
+                      <button
+                        class="value-button decrease-button"
+                        onclick="decreaseValue(this)"
+                        title="Azalt"
+                      >
+                        -
+                      </button>
+                      <div class="number">0</div>
+                      <button
+                        class="value-button increase-button"
+                        onclick="increaseValue(this, 5)"
+                        title="Arrtır"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="cart-card">
+                  <span class="cart-tag">Best Seller</span>
+                  <div class="cart-item">
+                    <div class="cart-detail">
+                      <img
+                        src="./asset/images/products/party-wear-1.jpg"
+                        alt=""
+                      />
+                      <div class="cart-name">
+                        <h3>name</h3>
+                        <span>100gram</span>
+                      </div>
+                    </div>
+                    <p class="cart-price">$400</p>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#">Remove</a>
+
+                    <div class="quantity-field">
+                      <button
+                        class="value-button decrease-button"
+                        onclick="decreaseValue(this)"
+                        title="Azalt"
+                      >
+                        -
+                      </button>
+                      <div class="number">0</div>
+                      <button
+                        class="value-button increase-button"
+                        onclick="increaseValue(this, 5)"
+                        title="Arrtır"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="line"></div>
+                <div class="cart-card">
+                  <span class="cart-tag">Best Seller</span>
+                  <div class="cart-item">
+                    <div class="cart-detail">
+                      <img
+                        src="./asset/images/products/party-wear-1.jpg"
+                        alt=""
+                      />
+                      <div class="cart-name">
+                        <h3>name</h3>
+                        <span>100gram</span>
+                      </div>
+                    </div>
+                    <p class="cart-price">$400</p>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#">Remove</a>
+
+                    <div class="quantity-field">
+                      <button
+                        class="value-button decrease-button"
+                        onclick="decreaseValue(this)"
+                        title="Azalt"
+                      >
+                        -
+                      </button>
+                      <div class="number">0</div>
+                      <button
+                        class="value-button increase-button"
+                        onclick="increaseValue(this, 5)"
+                        title="Arrtır"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="checkout">
+              <a href="checkout.html" class="checkout-btn"
+                >Continue to checkout</a
+              >
+              <div class="line"></div>
+              <div class="checkout-detail">
+                <div class="checkout-total">
+                  <h4>Subtotal(4 items)</h4>
+                  <p>$400</p>
+                </div>
+                <div class="checkout-discount">
+                  <h4>Tax</h4>
+                  <p>$40</p>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="checkout-overall">
+                <h4>Estimated total</h4>
+                <p class="price">$440</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="nav-stick">
+      <div class="header-main">
+        <div class="header-container">
+          <a href="home.html" class="header-logo"> Some Logo </a>
+
+          <nav class="desktop-navigation-menu">
+            <div class="header-container">
+              <ul class="desktop-menu-category-list">
+                <li class="menu-category">
+                  <a href="rescipeMainpage.html" class="menu-title"
+                    >Food Recipes</a
+                  >
+                </li>
+
+                <li class="menu-category">
+                  <a href="ingredientMainpage.html" class="menu-title"
+                    >Ingredients</a
+                  >
+                </li>
+
+                <li class="menu-category">
+                  <a href="rescipeMainpage.html" class="menu-title">Pizza</a>
+
+                  <ul class="dropdown-list">
+                    <li class="dropdown-item">
+                      <a href="#">Shirt</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Shorts & Jeans</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Safety Shoes</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Wallet</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="menu-category">
+                  <a href="#" class="menu-title">Traditional</a>
+
+                  <ul class="dropdown-list">
+                    <li class="dropdown-item">
+                      <a href="#">Clothes Perfume</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Deodorant</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Flower Fragrance</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Air Freshener</a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- <li class="menu-category">
+                  
+                </li> -->
+
+                <li class="menu-category">
+                  <a href="#" class="menu-title">About</a>
+                </li>
+
+                <li class="menu-category">
+                  <a href="#" class="menu-title">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="header-user-actions">
+            <!-- <a href="authenticate.html" class="action-btn"
+            ><ion-icon name="log-in-outline"></ion-icon
+          ></a> -->
+
+            <div class="action-btn user-dropdown">
+              <ion-icon name="person-outline" class="user-icon"></ion-icon>
+              <ul class="user-list">
+                <li class="user-item">
+                  <a href="userProfile.html">Account</a>
+                </li>
+                <li class="user-item">
+                  <a href="history.html" class="menu-title">History</a>
+                </li>
+
+                <li class="user-item">
+                  <a href="#">Logout</a>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="action-btn btn-popup">
+              <ion-icon name="heart-outline"></ion-icon>
+              <span class="count">0</span>
+            </a>
+
+            <a href="#" class="action-btn btn-popup">
+              <ion-icon name="bag-handle-outline"></ion-icon>
+              <span class="count">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="header">
+      <div class="header__main">
+        <div class="header__left">
+          <div class="header__content">
+            <h2 class="header__heading">
+              Discover Restaurant & Delicious Food
+            </h2>
+            <div class="header__form">
+              <input
+                type="text"
+                placeholder="Search Food"
+                class="header__form--input"
+              />
+              <button type="submit" class="header__form--go-button">Go</button>
+            </div>
+          </div>
+        </div>
+        <div class="header__right">
+          <div class="header__dish">
+            <img src="./asset/imgs/header_photo.png" alt="" />
+          </div>
+          <div class="img_salad">
+            <img src="./asset/imgs/heading_salad.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <h1 class="logo__name">
+        FOOD <span class="logo__circle logo__circle-1"></span>
+        <span class="logo__circle logo__circle-2"></span>
+      </h1>
+    </section>
+
+    <section class="section-intro">
+      <h2 class="secondary__heading">Popular dishes</h2>
+      <div class="intro-food">
+        <div class="intro-food__card">
+          <div class="intro-food__background">
+            <img src="./asset/imgs/pizza.jpg" alt="" class="intro-food__img" />
+          </div>
+          <div class="intro-food__text">
+            <h3 class="intro-food__heading">Italian Pizza</h3>
+            <p class="intro-food__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+              consequuntur dolore modi recusandae voluptas provident.
+            </p>
+            <a href="#" class="intro-food__btn">Detail</a>
+          </div>
+        </div>
+
+        <div class="intro-food__card">
+          <div class="intro-food__background">
+            <img
+              src="./asset/imgs/cheese_burger2.jpg"
+              alt=""
+              class="intro-food__img"
+            />
+          </div>
+          <div class="intro-food__text">
+            <h3 class="intro-food__heading">Cheese Burger</h3>
+            <p class="intro-food__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+              consequuntur dolore modi recusandae voluptas provident.
+            </p>
+            <a href="#" class="intro-food__btn">Detail</a>
+          </div>
+        </div>
+
+        <div class="intro-food__card">
+          <div class="intro-food__background">
+            <img src="./asset/imgs/steak.jpg" alt="" class="intro-food__img" />
+          </div>
+          <div class="intro-food__text">
+            <h3 class="intro-food__heading">Grain Fed Beef</h3>
+            <p class="intro-food__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+              consequuntur dolore modi recusandae voluptas provident.
+            </p>
+            <a href="#" class="intro-food__btn">Detail</a>
+          </div>
+        </div>
+
+        <div class="intro-food__card">
+          <div class="intro-food__background">
+            <img
+              src="./asset/imgs/pan_cake.jpg"
+              alt=""
+              class="intro-food__img"
+            />
+          </div>
+          <div class="intro-food__text">
+            <h3 class="intro-food__heading">Pancake</h3>
+            <p class="intro-food__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+              consequuntur dolore modi recusandae voluptas provident.
+            </p>
+            <a href="#" class="intro-food__btn">Detail</a>
+          </div>
+        </div>
+
+        <div class="intro-food__seemore">
+          <img src="asset/imgs/icon_setting.svg" alt="" />
+          <a href="#">See More</a>
+        </div>
+
+        <!-- <span class="small-circle">&nlArr;</span> -->
+      </div>
+    </section>
+
+    <section class="section-feature container">
+      <h2 class="secondary__heading">Service and feature</h2>
+      <div class="feature">
+        <div class="feature__left">
+          <div class="feature__1">
+            <div class="feature-icon">
+              <img src="asset/imgs/discussion.png" alt="" />
+              <span class="arrow arrow__right"></span>
+            </div>
+            <div class="feature-label">
+              <p>
+                Buying integrient <br /><span>
+                  You can buy the ingrendient that seen by recipe.</span
+                ><span>And You can only buy the things that you need. </span>
+              </p>
+            </div>
+          </div>
+          <div class="feature__2">
+            <div class="feature-label">
+              <p>
+                Search more than 1000 recipe <br /><span>
+                  You can search recipe and learning how to cook.</span
+                ><span>And you can save the item that you love.</span>
+              </p>
+            </div>
+            <div class="feature-icon">
+              <img src="asset/imgs/dish.png" alt="" />
+              <span class="arrow arrow__left"></span>
+            </div>
+          </div>
+        </div>
+        <div class="feature__right">
+          <div class="feature__3">
+            <div class="feature-icon">
+              <img src="asset/imgs/delivery-man.png" alt="" />
+              <p class="feature-caption">Cash on Delivery...</p>
+              <p class="feature-text">
+                You can order the item and no need to prepaid.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-meal container">
+      <div class="meal">
+        <div class="meal__header">
+          <h2 class="meal__heading">Something</h2>
+          <a href="#" class="meal__all">view all</a>
+        </div>
+        <nav class="meal__nav">
+          <ul class="meal__list">
+            <li class="meal__item">
+              <a href="#" class="meal__link meal__link-active">test</a>
+            </li>
+            <li class="meal__item"><a href="#" class="meal__link">test</a></li>
+            <li class="meal__item"><a href="#" class="meal__link">test</a></li>
+            <li class="meal__item"><a href="#" class="meal__link">test</a></li>
+            <li class="meal__item"><a href="#" class="meal__link">test</a></li>
+          </ul>
+        </nav>
+        <div class="meal__post">
+          <div class="meal__card">
+            <img src="./asset/imgs/simple.jpg" alt="" />
+            <div class="meal__data">
+              <h3 class="teartiary__heading">Pancake and Mopie syrup</h3>
+              <div class="meal__info">
+                <p class="meal__type">Myanmar</p>
+                <a href="#" class="meal__button">+</a>
+              </div>
+            </div>
+            <span class="meal__label">1</span>
+          </div>
+
+          <div class="meal__card">
+            <img src="./asset/imgs/simple.jpg" alt="" />
+            <div class="meal__data">
+              <h3 class="teartiary__heading">Pancake and Mopie syrup</h3>
+              <div class="meal__info">
+                <p class="meal__type">Myanmar</p>
+                <a href="#" class="meal__button">+</a>
+              </div>
+            </div>
+            <span class="meal__label">1</span>
+          </div>
+
+          <div class="meal__card">
+            <img src="./asset/imgs/simple.jpg" alt="" />
+            <div class="meal__data">
+              <h3 class="teartiary__heading">Pancake and Mopie syrup</h3>
+              <div class="meal__info">
+                <p class="meal__type">Myanmar</p>
+                <a href="#" class="meal__button">+</a>
+              </div>
+            </div>
+            <span class="meal__label">1</span>
+          </div>
+
+          <div class="meal__card">
+            <img src="./asset/imgs/simple.jpg" alt="" />
+            <div class="meal__data">
+              <h3 class="teartiary__heading">Pancake and Mopie syrup</h3>
+              <div class="meal__info">
+                <p class="meal__type">Myanmar</p>
+                <a href="#" class="meal__button">+</a>
+              </div>
+            </div>
+            <span class="meal__label">1</span>
+          </div>
+
+          <div class="meal__card">
+            <img src="./asset/imgs/simple.jpg" alt="" />
+            <div class="meal__data">
+              <h3 class="teartiary__heading">Pancake and Mopie syrup</h3>
+              <div class="meal__info">
+                <p class="meal__type">Myanmar</p>
+                <a href="#" class="meal__button">+</a>
+              </div>
+            </div>
+            <span class="meal__label">1</span>
+          </div>
+
+          <div class="meal__card">
+            <img src="./asset/imgs/simple.jpg" alt="" />
+            <div class="meal__data">
+              <h3 class="teartiary__heading">Pancake and Mopie syrup</h3>
+              <div class="meal__info">
+                <p class="meal__type">Myanmar</p>
+                <a href="#" class="meal__button">+</a>
+              </div>
+            </div>
+            <span class="meal__label">1</span>
+          </div>
+
+          <div class="meal__card">
+            <img src="./asset/imgs/simple.jpg" alt="" />
+            <div class="meal__data">
+              <h3 class="teartiary__heading">Pancake and Mopie syrup</h3>
+              <div class="meal__info">
+                <p class="meal__type">Myanmar</p>
+                <a href="#" class="meal__button">+</a>
+              </div>
+            </div>
+            <span class="meal__label">1</span>
+          </div>
+
+          <div class="meal__card">
+            <img src="./asset/imgs/simple.jpg" alt="" />
+            <div class="meal__data">
+              <h3 class="teartiary__heading">Pancake and Mopie syrup</h3>
+              <div class="meal__info">
+                <p class="meal__type">Myanmar</p>
+                <a href="#" class="meal__button">+</a>
+              </div>
+            </div>
+            <span class="meal__label">1</span>
+          </div>
+          <!-- <div class="meal__card">
+            <img src="./asset/imgs/simple.jpg" alt="" />
+            <div class="meal__data">
+              <h3 class="teartiary__heading">Pancake and Mopie syrup</h3>
+              <div class="meal__info">
+                <p class="meal__type">Myanmar</p>
+                <a href="#" class="meal__button">+</a>
+              </div>
+            </div>
+            <span class="meal__label">1</span>
+          </div>
+          <div class="meal__card">
+            <img src="./asset/imgs/simple.jpg" alt="" />
+            <div class="meal__data">
+              <h3 class="teartiary__heading">Pancake and Mopie syrup</h3>
+              <div class="meal__info">
+                <p class="meal__type">Myanmar</p>
+                <a href="#" class="meal__button">+</a>
+              </div>
+            </div>
+            <span class="meal__label">1</span>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section-customer container">
+      <div class="customer">
+        <div class="customer__header">
+          <h2 class="customer__title">Some title for somethings...</h2>
+        </div>
+        <div class="customer__body">
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="customer__profile">
+                  <div class="customer__profile--img">
+                    <img
+                      src="data:image/jpeg;base64,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"
+                      alt=""
+                    />
+                  </div>
+                  <div class="customer__profile--description">
+                    <p class="profile--name">Zaw Hein Htet</p>
+                    <p class="profile--ours">Our Customer</p>
+                  </div>
+                </div>
+                <div class="customer__review">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Delectus aut quo tempora facilis id possimus enim
+                    perferendis quis ratione ullam iure, et minima deserunt
+                    placeat exercitationem excepturi est numquam eaque!
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="customer__profile">
+                  <div class="customer__profile--img">
+                    <img
+                      src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIkAWwMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAADBAUGBwIBAAj/xAA7EAACAQMCBAIHBQYHAQAAAAABAgMABBEFIQYSMUETURQiMlJhcbEHQoGRoTM1U2JycyM0Q4KywdEV/8QAGAEAAwEBAAAAAAAAAAAAAAAAAAEDAgT/xAAfEQEBAAIBBQEBAAAAAAAAAAAAAQIRAxIhMUFRcRP/2gAMAwEAAhEDEQA/ALJHHR0SvkWjqtaZeBa6CURR8K6AoAJT4VwyUzy1wy0AmyUF026U8y0F12oCNljpSWKpV1pWSOmENND12pQw71MzR0oYt+lBLaq0VRXKijKKTT0CusV8KoXH/EzwXC6TaM4Bx6S6HGF93PalboSbSeucY21ndNYadC95eDY8vsIfj5/IfnS0Gr6xNDG0dxbF3OxeP1CfdON1NVkBboRTaWscc9u2yMeXO3TPbNKa7qFzbc0rrdWFy+OYDDRyHzz5/GpZW3wrMZF4uOJjphRdVg5Vfo8Z7/T9ak9O1Sx1WDxbGdJB95c+sp8iKxWbiS9uFeO85Z43GGUjY/EeR+NKWF7NZ3cUthPNBJzdVfGa3jb7Zyk9N8daWkWh6HcyXelwyztzS4wxwBk+e1NSCtpo+RM0uY96fkWgFd6YTy0VaEtFWg3rnkjZuuATivz5LNeXuvyzW4Z7qaVn2Px+Fb/extLZXEaMUd42UMOxI61l32SWUU+pXV3cAFY1VeY9s71PPtG+PvdJDReCdUnYS3hiiLe4gBx8xVpX7P7Jo19LDzMPeJIFT0nFWg2EwgmvYlk6cpqTGu2EkPiB15cZyDtUP10fjP7zgPTFt+VIMPjGaz7jPhpNGljmgx4ecNmtdvuN+HVnMBvollz0qg/aZew3dnm2dXiO5x2pY7mQy1cbsf7M9Vku0ubNj6kKq6D3c5B/Crq4rNPsfRvTdScj1RGi5/E/+Vpr11zw5L5KyCgEb0y4oB60yS69KIpoSGiqaDEbPI3L1xWYcK6Hcz3E6QHwifEUQc55ecFSCfM8rEfJK05agNOjtdN1a9iwMPKJuVxkAkdvyNT5KrxTdV+74S1y4ble8kXH3Ftgqj458qPNwrqUHCd3fR61cL4UnqWwRDGyA4bcjm97v5VbLvUILxjaQGORyvr+tsg7k05fX+ltw+Uju4fR/DyroRjAGxA8vhUepfoZNc8OazGqyPcEjO8fhMVx8OXvUNqVjdW4Q3Kt4fI0kseSAyjG2/TrWoaTPCllDHKwK8vqNHIyq69iMHpVS48vYTA8NsnruOUvzFic9snfuaeOW6zlhqAfZjMlvaXGBh5JsnvtgYrReYMoI6Vj+gXhs2Eecb5NahpF2Li1Q53xXRPDlvk29BPWjPQGG9Mkmhoqml0NFU0GODVP43K291aXIyvO3hyMO4xkf91bAaqXHyeNYqmcEsMHyNZym4eN1SOlQ6lpaT3CWnpcUxIaSI8zAdtvLBrPtR0u+tswhLiO2YkiNlYAb+VabwHqUVzavaTS+HMhwQTiu9e4bae88camDHj2eUZz865pel19soplkurT6ZBGiiK2tQAsrnlxv28+tQus3ha4IjYOgc8rHfPbNTvFdyllapYW1xzMd3INU+ZXWQCTrgHHlW+Obu0uTL1BrWRhMCSSSe9aVwrdnwwjGs0tF5plq8aKxi5SNqvHPV7LZFDPWhW8vPGN+1dc1MH0ajKwpRGzRlagzAbaq7xZH41ugHZwf1qwRI8rBI1LMewFC1rSXhhDXOzdQo7VnKyTZ4y2sg1O0nsr5p7dmRs5BBoEuuXhjKvcyetjOetXbVLJZATyg4quXmmxfwhntXPL9dNwvpXYYjcS+LJluU5JJ60PVI2WdXZSAyjerDFaAYUKAPrTw05JyFdAwI70+vVZ/nuaU6w/bLV1079mtSthwJZXliZY+a3nBIR1OQfmK9fhrUtNHrR+NGPvx7/p1roxu458pq6O2U3qAZpzmHnUJbycpwetPiUY60yiVjepvS9IuLwq0mYovM9TTei6HHaqstziSfr5hflVgQhRgVnbT2zsoLOPkgQDzY9T+NJa7Zen2jKu0ybqD96pASYocrKw64pWbhy6u2W6hbvE7K6EHocjoarV8uGIrY7+0t7sEXMKyfzLsartzw3p7vnmkH9SZqN47PC85Z7Z5aWckzjlTrVq0zQpZnRVXfufKp+10iygYHEr4/l5frUtFhYwkaqi+6vf5micf0suX4BBapBGkMfsoMZ86cRB3FD3zRVOKsgjtS4fsL/LPFySfxE2NQD8I3QciO4iK52LAg1c+cYrgyDNPZaFWcA4710LkedQsN20kG5/xVJR/mO/5YP405bbjOaRpIS8wrl2oasAK+ZqA4cnNBcZohO9K3F9aQHlluYkbyLjP5UB6VokewqO/wDt6WX5PT7cN2DOF+tOxyKyhkYMp6EHINGwMaG7YFfMwoMkgxQHol9fGaUF0zZYdyfrQ3uVEuB1oNlhrZCTuc/WgIuwvw2oIFYGO6iEij+bGfpn8qsNnc8y5NUDSPb0D5H6NV0sv2f40BMpNtnNczXaRRPNIcRqMk0t/pGlda/c839I+tBZXU2kIp1uIFkx6rjODXLSxwRsx5URRknoAKXsP8hb/wBpfpUdxV+4L3+0aMuxzvCN3xvpgikeKKa4VGKk8gC7Y3yfPO3c1FR8c6TGj+iW81nJnmC+GPDc+RCnbPnis/l9n/dQpPZqdoblZ6nb6harcWsqyIw6qc4PcVxNcY71SPs69l/lJ9Uq13PSty9gUlv1F2ik7mqbd8S6tHcyx2JUQIxVeYb5Gx/XNS91+9bf5n6GoO39l/7sn/I0w//Z"
+                      alt=""
+                    />
+                  </div>
+                  <div class="customer__profile--description">
+                    <p class="profile--name">Zaw Hein Htet</p>
+                    <p class="profile--ours">Our Customer</p>
+                  </div>
+                </div>
+                <div class="customer__review">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Delectus aut quo tempora facilis id possimus enim
+                    perferendis quis ratione ullam iure, et minima deserunt
+                    placeat exercitationem excepturi est numquam eaque!
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="customer__profile">
+                  <div class="customer__profile--img">
+                    <img
+                      src="data:image/jpeg;base64,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"
+                      alt=""
+                    />
+                  </div>
+                  <div class="customer__profile--description">
+                    <p class="profile--name">Zaw Hein Htet</p>
+                    <p class="profile--ours">Our Customer</p>
+                  </div>
+                </div>
+                <div class="customer__review">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Delectus aut quo tempora facilis id possimus enim
+                    perferendis quis ratione ullam iure, et minima deserunt
+                    placeat exercitationem excepturi est numquam eaque!
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="customer__profile">
+                  <div class="customer__profile--img">
+                    <img
+                      src="data:image/jpeg;base64,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"
+                      alt=""
+                    />
+                  </div>
+                  <div class="customer__profile--description">
+                    <p class="profile--name">Zaw Hein Htet</p>
+                    <p class="profile--ours">Our Customer</p>
+                  </div>
+                </div>
+                <div class="customer__review">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Delectus aut quo tempora facilis id possimus enim
+                    perferendis quis ratione ullam iure, et minima deserunt
+                    placeat exercitationem excepturi est numquam eaque!
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="customer__profile">
+                  <div class="customer__profile--img">
+                    <img
+                      src="data:image/jpeg;base64,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"
+                      alt=""
+                    />
+                  </div>
+                  <div class="customer__profile--description">
+                    <p class="profile--name">Zaw Hein Htet</p>
+                    <p class="profile--ours">Our Customer</p>
+                  </div>
+                </div>
+                <div class="customer__review">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Delectus aut quo tempora facilis id possimus enim
+                    perferendis quis ratione ullam iure, et minima deserunt
+                    placeat exercitationem excepturi est numquam eaque!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-member">
+      <div class="member">
+        <div class="member__header">
+          <h2 class="member__title">Some Title for somethings...</h2>
+        </div>
+        <div class="member__body">
+          <div class="member__card">
+            <div class="img-container"></div>
+            <div class="text-container"></div>
+          </div>
+
+          <div class="member__card">
+            <div class="img-container"></div>
+            <div class="text-container"></div>
+          </div>
+
+          <div class="member__card">
+            <div class="img-container"></div>
+            <div class="text-container"></div>
+          </div>
+
+          <div class="member__card">
+            <div class="img-container"></div>
+            <div class="text-container"></div>
+          </div>
+
+          <div class="member__card">
+            <div class="img-container"></div>
+            <div class="text-container"></div>
+          </div>
+
+          <div class="member__card">
+            <div class="img-container"></div>
+            <div class="text-container"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section-footer">
+      <div class="footer">
+        <div class="footer__search">
+          <h2>subscribe</h2>
+
+          <div>
+            <div class="footer__search--input">
+              <input type="text" placeholder="Enter Your Email Address" />
+              <button>Search</button>
+            </div>
+            <p>
+              Subscribe to stay tuned for new web design and latest
+              updates.Let's do it
+            </p>
+          </div>
+        </div>
+
+        <div class="footer--firstLine"></div>
+
+        <div class="footer__info">
+          <div class="col-4">
+            <img src="./asset/imgs/company__logo.svg" alt="" />
+          </div>
+
+          <div class="col-4">
+            <h4>Product</h4>
+            <ul>
+              <li>Landing Page</li>
+              <li>Popup Builder</li>
+              <li>Web Design</li>
+              <li>Content</li>
+              <li>Integration</li>
+            </ul>
+          </div>
+
+          <div class="col-4">
+            <h4>Use Cases</h4>
+            <ul>
+              <li>Web designers</li>
+              <li>Marketers</li>
+              <li>Small Business</li>
+              <li>Website Builder</li>
+            </ul>
+          </div>
+
+          <div class="col-4">
+            <h4>Company</h4>
+            <ul>
+              <li>About Us</li>
+              <li>Careers</li>
+              <li>FAQs</li>
+              <li>Teams</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+
+          <div class="col-4">
+            <h4>Contact us</h4>
+            <ul>
+              <li>+ Wisconsin Ave,Sule 700 <br />Chevy chase</li>
+              <li>+ Support@figma.com</li>
+              <li>+ 1 800 854-56-78</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer--secondLine"></div>
+        <p class="description">&copy 2021 All Right Reverse</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./asset/vendor/js/popup.js"></script>
+    <script src="./asset//vendor/js/button.js"></script>
+    <script src="./asset/vendor/js/script.js"></script>
+  </body>
+</html>

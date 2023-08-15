@@ -1,0 +1,132 @@
+.section-intro {
+    padding: 10rem 0 0rem 2rem;
+    position: relative;
+    background-color: #f8f8f8;
+    margin-bottom: 2rem;
+}
+
+.intro-food {
+
+    display: flex;
+    align-items: center;
+
+    gap: 4rem;
+
+    margin: 5rem 0;
+
+    
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__card {
+        flex: 0 0 26rem;
+        height: 25rem;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    &__card:hover &__text{
+        height: 80%;
+    }
+
+    &__card:hover &__body{
+        opacity: 1;
+    }
+
+    
+
+    &__background {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    &__text {
+        height: 25%;
+        width: 100%;
+        background-color: rgba(255, 166, 0, 0.871);
+        position: absolute;
+        padding: 1.5rem;
+        bottom: 0%;
+        transition: all 0.5s;
+        backdrop-filter: blur(1);
+
+        h3{
+            font-size: 1.8rem;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        p{
+            font-size: 1.2rem;
+            color: white;
+            opacity:0;
+            letter-spacing: 0.1rem;
+            transition: all 0.5s;
+        }
+    }
+
+
+    &__btn {
+
+        text-decoration: none;
+        padding: 0.3rem 3.5rem;
+        background-color: #f8f8f8;
+        font-size: 1.4rem;
+        border-radius: 20px 0 0 20px;
+        font-weight: 600;
+
+        display: inline-block;
+        margin-left: auto;
+        color: orange;
+
+        position: absolute;
+        right: 0;
+        bottom: 1rem;
+    }
+
+    &__seemore {
+        flex: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        img{
+            animation: spin 2s infinite;
+            margin-bottom: 1rem;
+            fill: orange;
+        }
+
+        a{
+            text-decoration: none;
+            font-size: 1.6rem;
+            color: orange!important;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.1rem;
+            
+        }
+    }
+
+
+
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

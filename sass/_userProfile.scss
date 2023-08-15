@@ -1,0 +1,163 @@
+.profile {
+    display: grid;
+    grid-template-columns: 14vw 1fr;
+    border: 1px solid var(--onyx);
+    margin-bottom: 4rem;
+
+    &__nav {
+
+        // test
+        // background: red;
+        border-right: 1px solid var(--onyx);
+
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        padding: 2rem 3rem;
+
+        &-detail {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+
+        }
+
+        &-items {
+            font-size: 1.4rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+    }
+
+    &__user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+    }
+
+    &__photo {
+        width: 10rem;
+        height: 10rem;
+        background: #000;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            font-size: 3rem;
+            font-weight: 600;
+            color: #fff;
+        }
+    }
+
+    &__name {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    &__detail {
+        display: flex;
+        flex-direction: column;
+
+        // background: blue;
+
+    }
+
+    &__header {
+        padding: 2rem;
+        border-bottom: 1px solid var(--onyx);
+        // background: green;
+        text-align: center;
+
+
+        span {
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+        }
+
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 600;
+
+
+    }
+
+    &__forms {
+        padding: 2rem 20rem;
+
+    }
+
+    &__form {
+        &-basics {}
+
+        &-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+
+        }
+
+    }
+
+    &__inputs {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+
+        input {
+
+            width: 94%;
+            // border: none;
+            border: 1px solid var(--onyx);
+            outline: none;
+            padding: 1rem 3rem;
+
+            font-size: 1.34rem;
+            border-radius: 0.5rem;
+        }
+
+        a {
+            font-size: 1.5rem;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+            padding: 0.3rem;
+            border-radius: 1rem;
+            width: 3rem;
+            height: 3rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+
+        }
+
+    }
+
+    &__btn {
+
+        padding: 1rem 2rem;
+
+        border: none;
+        outline: none;
+        font-size: 1.34rem;
+        background: #000;
+        color: #fff;
+
+    }
+
+
+}

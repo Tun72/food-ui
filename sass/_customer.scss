@@ -1,0 +1,106 @@
+.customer {
+    margin-bottom: 10rem;
+    &__review{
+        margin-top: 2rem;
+        p{
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-align: justify;
+        }
+    }
+    &__header {
+        margin-bottom: 10rem;
+    }
+
+    &__title {
+        @include headingWithBorderCenter;
+    }
+
+    &__profile {
+        display: flex;
+        align-items: center;
+
+        &--img {
+            margin-right: 2rem;
+            width: 9rem;
+            height: 9rem;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+        }
+
+        &--description{
+            .profile--name{
+                color: orange !important;
+                font-size: 1.8rem;
+                color: black;
+                font-weight: 700;
+                margin: 0;
+                padding: 0;
+            }
+            .profile--ours{
+                font-size: 1.4rem;
+                color: black;
+                font-weight: 600;
+                margin: 0;
+                padding: 0;
+                opacity: 0.5;
+            }
+        }
+    }
+
+
+
+
+
+}
+
+.swiper {
+    width: 79%;
+    height: 300px;
+    overflow-y: visible !important; 
+}
+
+.swiper-slide {
+    padding: 30px;
+    height: 300px !important;
+    background: #fff;
+    display: flex!important ;
+    justify-content: center!important   ;
+    align-items: center!important   ;
+    border-radius: 20px;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.swiper-slide-active {
+    transform: scale(1.1) !important;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination {
+    bottom: -8rem !important;
+}
+
+.swiper-pagination-bullet {
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+    border-radius: 50% !important;
+    margin-right: 1.5rem !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: black !important;
+    transform: scale(1.3);
+}

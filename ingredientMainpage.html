@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping</title>
+
+    <!--
+    - favicon
+  -->
+    <!-- <link
+      rel="shortcut icon"
+      href="./asset/images/logo/favicon.ico"
+      type="image/x-icon"
+    /> -->
+
+    <!--
+    - custom css link
+  -->
+    <!-- <link rel="stylesheet" href="./asset/vendor/css/references.css" /> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./asset/css/styleDetail.css" />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="modal">
+      <div class="modal-close-overlay"></div>
+
+      <div class="modal-content">
+        <button class="modal-close-btn">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <div class="newsletter">
+          <div class="newsletter-header">
+            <h3 class="newsletter-title">saved items</h3>
+          </div>
+          <table class="save">
+            <tr>
+              <td>
+                <img src="./asset/images/products/jewellery-2.jpg" alt="" />
+              </td>
+              <td>Name</td>
+              <td>$1000</td>
+              <td>
+                <button class="save_btn">
+                  +<ion-icon name="cart-outline"></ion-icon>
+                </button>
+              </td>
+              <td>
+                <span class="icon"
+                  ><ion-icon name="trash-outline"></ion-icon
+                ></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-close-overlay"></div>
+
+      <div class="modal-content">
+        <button class="modal-close-btn">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <div class="newsletter">
+          <div class="newsletter-header">
+            <h3 class="newsletter-title">Cart (4 item)</h3>
+          </div>
+
+          <div class="cartAndCheck">
+            <div class="cart">
+              <div class="cart-title">
+                <h3>Pickup or delivery from store, as soon as Today</h3>
+              </div>
+              <div class="line"></div>
+
+              <div class="all-carts">
+                <div class="cart-card">
+                  <span class="cart-tag">Best Seller</span>
+                  <div class="cart-item">
+                    <div class="cart-detail">
+                      <img
+                        src="./asset/images/products/party-wear-1.jpg"
+                        alt=""
+                      />
+                      <div class="cart-name">
+                        <h3>name</h3>
+                        <span>100gram</span>
+                      </div>
+                    </div>
+                    <p class="cart-price">$400</p>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#">Remove</a>
+
+                    <div class="quantity-field">
+                      <button
+                        class="value-button decrease-button"
+                        onclick="decreaseValue(this)"
+                        title="Azalt"
+                      >
+                        -
+                      </button>
+                      <div class="number">0</div>
+                      <button
+                        class="value-button increase-button"
+                        onclick="increaseValue(this, 5)"
+                        title="Arrtır"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="cart-card">
+                  <span class="cart-tag">Best Seller</span>
+                  <div class="cart-item">
+                    <div class="cart-detail">
+                      <img
+                        src="./asset/images/products/party-wear-1.jpg"
+                        alt=""
+                      />
+                      <div class="cart-name">
+                        <h3>name</h3>
+                        <span>100gram</span>
+                      </div>
+                    </div>
+                    <p class="cart-price">$400</p>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#">Remove</a>
+
+                    <div class="quantity-field">
+                      <button
+                        class="value-button decrease-button"
+                        onclick="decreaseValue(this)"
+                        title="Azalt"
+                      >
+                        -
+                      </button>
+                      <div class="number">0</div>
+                      <button
+                        class="value-button increase-button"
+                        onclick="increaseValue(this, 5)"
+                        title="Arrtır"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="cart-card">
+                  <span class="cart-tag">Best Seller</span>
+                  <div class="cart-item">
+                    <div class="cart-detail">
+                      <img
+                        src="./asset/images/products/party-wear-1.jpg"
+                        alt=""
+                      />
+                      <div class="cart-name">
+                        <h3>name</h3>
+                        <span>100gram</span>
+                      </div>
+                    </div>
+                    <p class="cart-price">$400</p>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#">Remove</a>
+
+                    <div class="quantity-field">
+                      <button
+                        class="value-button decrease-button"
+                        onclick="decreaseValue(this)"
+                        title="Azalt"
+                      >
+                        -
+                      </button>
+                      <div class="number">0</div>
+                      <button
+                        class="value-button increase-button"
+                        onclick="increaseValue(this, 5)"
+                        title="Arrtır"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="line"></div>
+                <div class="cart-card">
+                  <span class="cart-tag">Best Seller</span>
+                  <div class="cart-item">
+                    <div class="cart-detail">
+                      <img
+                        src="./asset/images/products/party-wear-1.jpg"
+                        alt=""
+                      />
+                      <div class="cart-name">
+                        <h3>name</h3>
+                        <span>100gram</span>
+                      </div>
+                    </div>
+                    <p class="cart-price">$400</p>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#">Remove</a>
+
+                    <div class="quantity-field">
+                      <button
+                        class="value-button decrease-button"
+                        onclick="decreaseValue(this)"
+                        title="Azalt"
+                      >
+                        -
+                      </button>
+                      <div class="number">0</div>
+                      <button
+                        class="value-button increase-button"
+                        onclick="increaseValue(this, 5)"
+                        title="Arrtır"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="checkout">
+              <a href="checkout.html" class="checkout-btn"
+                >Continue to checkout</a
+              >
+              <div class="line"></div>
+              <div class="checkout-detail">
+                <div class="checkout-total">
+                  <h4>Subtotal(4 items)</h4>
+                  <p>$400</p>
+                </div>
+                <div class="checkout-discount">
+                  <h4>Tax</h4>
+                  <p>$40</p>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="checkout-overall">
+                <h4>Estimated total</h4>
+                <p class="price">$440</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <div class="header-main">
+        <div class="header-container">
+          <a href="home.html" class="header-logo"> Some Logo </a>
+
+          <nav class="desktop-navigation-menu">
+            <div class="header-container">
+              <ul class="desktop-menu-category-list">
+                <li class="menu-category">
+                  <a href="rescipeMainpage.html" class="menu-title"
+                    >Food Recipes</a
+                  >
+                </li>
+
+                <li class="menu-category">
+                  <a href="ingredientMainpage.html" class="menu-title"
+                    >Ingredients</a
+                  >
+                </li>
+
+                <li class="menu-category">
+                  <a href="rescipeMainpage.html" class="menu-title">Pizza</a>
+
+                  <ul class="dropdown-list">
+                    <li class="dropdown-item">
+                      <a href="#">Shirt</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Shorts & Jeans</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Safety Shoes</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Wallet</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="menu-category">
+                  <a href="#" class="menu-title">Traditional</a>
+
+                  <ul class="dropdown-list">
+                    <li class="dropdown-item">
+                      <a href="#">Clothes Perfume</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Deodorant</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Flower Fragrance</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Air Freshener</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="menu-category">
+                  <a href="history.html" class="menu-title">History</a>
+                </li>
+                <li class="menu-category">
+                  <a href="#" class="menu-title">About</a>
+                </li>
+
+                <li class="menu-category">
+                  <a href="#" class="menu-title">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="header-user-actions">
+            <!-- <a href="authenticate.html" class="action-btn"
+              ><ion-icon name="log-in-outline"></ion-icon
+            ></a> -->
+
+            <div class="action-btn user-dropdown">
+              <ion-icon name="person-outline" class="user-icon"></ion-icon>
+              <ul class="user-list">
+                <li class="user-item">
+                  <a href="userProfile.html">Account</a>
+                </li>
+
+                <li class="user-item">
+                  <a href="#">Logout</a>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="action-btn btn-popup">
+              <ion-icon name="heart-outline"></ion-icon>
+              <span class="count">0</span>
+            </a>
+
+            <a href="#" class="action-btn btn-popup">
+              <ion-icon name="bag-handle-outline"></ion-icon>
+              <span class="count">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="banner">
+        <div class="header-container">
+          <div class="slider-container has-scrollbar">
+            <div class="slider-item">
+              <img
+                src="./asset/images/banner-1.jpg"
+                alt="women's latest fashion sale"
+                class="banner-img"
+              />
+
+              <div class="banner-content">
+                <p class="banner-subtitle">Top Ingredients</p>
+
+                <h2 class="banner-title">Most Fresh and Delicious</h2>
+
+                <p class="banner-text">starting at &dollar; <b>20</b>.00</p>
+
+                <a href="#" class="banner-btn">Shop now</a>
+              </div>
+            </div>
+
+            <div class="slider-item">
+              <img
+                src="./asset/images/banner-7.jpg"
+                alt="modern sunglasses"
+                class="banner-img"
+              />
+
+              <div class="banner-content">
+                <p class="banner-subtitle">Rare Ingredients</p>
+
+                <h2 class="banner-title">To cook your own meals</h2>
+
+                <p class="banner-text">starting at &dollar; <b>15</b>.00</p>
+
+                <a href="#" class="banner-btn">Shop now</a>
+              </div>
+            </div>
+
+            <div class="slider-item">
+              <img
+                src="./asset/images/banner-5.jpg"
+                alt="new fashion summer sale"
+                class="banner-img"
+              />
+
+              <div class="banner-content">
+                <p class="banner-subtitle">Sale Offer</p>
+
+                <h2 class="banner-title">Mozzarella cheese</h2>
+
+                <p class="banner-text">starting at &dollar; <b>29</b>.99</p>
+
+                <a href="#" class="banner-btn">Shop now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-container">
+        <div class="header-container">
+          <!--
+          - SIDEBAR
+        -->
+
+          <div class="sidebar has-scrollbar" data-mobile-menu>
+            <div class="sidebar-category">
+              <div class="sidebar-top">
+                <h2 class="sidebar-title">Ingredients</h2>
+
+                <button class="sidebar-close-btn" data-mobile-menu-close-btn>
+                  <ion-icon name="close-outline"></ion-icon>
+                </button>
+              </div>
+
+              <ul class="sidebar-menu-category-list">
+                <li class="sidebar-menu-category">
+                  <button class="sidebar-accordion-menu" data-accordion-btn>
+                    <div class="menu-title-flex">
+                      <img
+                        src="./asset/imgs/pizza.svg"
+                        alt="clothes"
+                        width="20"
+                        height="20"
+                        class="menu-title-img"
+                      />
+
+                      <p class="menu-title">Vegetable</p>
+                    </div>
+
+                    <div>
+                      <i class="ri-filter-2-line"></i>
+                    </div>
+                  </button>
+                </li>
+                <li class="sidebar-menu-category">
+                  <button class="sidebar-accordion-menu" data-accordion-btn>
+                    <div class="menu-title-flex">
+                      <img
+                        src="./asset/imgs/pizza.svg"
+                        alt="clothes"
+                        width="20"
+                        height="20"
+                        class="menu-title-img"
+                      />
+
+                      <p class="menu-title">Meats</p>
+                    </div>
+
+                    <div>
+                      <i class="ri-filter-2-line"></i>
+                    </div>
+                  </button>
+                </li>
+
+                <li class="sidebar-menu-category">
+                  <button class="sidebar-accordion-menu" data-accordion-btn>
+                    <div class="menu-title-flex">
+                      <img
+                        src="./asset/imgs/pizza.svg"
+                        alt="clothes"
+                        width="20"
+                        height="20"
+                        class="menu-title-img"
+                      />
+
+                      <p class="menu-title">Meats</p>
+                    </div>
+
+                    <div>
+                      <i class="ri-filter-2-line"></i>
+                    </div>
+                  </button>
+                </li>
+
+                <li class="sidebar-menu-category">
+                  <button class="sidebar-accordion-menu" data-accordion-btn>
+                    <div class="menu-title-flex">
+                      <img
+                        src="./asset/imgs/pizza.svg"
+                        alt="clothes"
+                        width="20"
+                        height="20"
+                        class="menu-title-img"
+                      />
+
+                      <p class="menu-title">Meats</p>
+                    </div>
+
+                    <div>
+                      <i class="ri-filter-2-line"></i>
+                    </div>
+                  </button>
+                </li>
+
+                <li class="sidebar-menu-category">
+                  <button class="sidebar-accordion-menu" data-accordion-btn>
+                    <div class="menu-title-flex">
+                      <img
+                        src="./asset/imgs/pizza.svg"
+                        alt="clothes"
+                        width="20"
+                        height="20"
+                        class="menu-title-img"
+                      />
+
+                      <p class="menu-title">Meats</p>
+                    </div>
+
+                    <div>
+                      <i class="ri-filter-2-line"></i>
+                    </div>
+                  </button>
+                </li>
+
+                <li class="sidebar-menu-category">
+                  <button class="sidebar-accordion-menu" data-accordion-btn>
+                    <div class="menu-title-flex">
+                      <img
+                        src="./asset/imgs/pizza.svg"
+                        alt="clothes"
+                        width="20"
+                        height="20"
+                        class="menu-title-img"
+                      />
+
+                      <p class="menu-title">Meats</p>
+                    </div>
+
+                    <div>
+                      <i class="ri-filter-2-line"></i>
+                    </div>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="product-box">
+            <div class="product-main">
+              <div class="product-title">
+                <h2 class="title">New Products</h2>
+                <form action="#" class="search-form">
+                  <input
+                    type="text"
+                    name="name"
+                    class="search-input"
+                    placeholder="Enter Ingredients name... "
+                  />
+                  <button class="search-btn" type="submit">
+                    <ion-icon
+                      name="search-outline"
+                      class="search-icon"
+                    ></ion-icon>
+                  </button>
+                </form>
+              </div>
+
+              <div class="product-grid">
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="./asset/imgs/water.webp"
+                      alt="Mens Winter Leathers Jackets"
+                      width="300"
+                      class="product-img default"
+                    />
+                    <img
+                      src="./asset/imgs/water.webp"
+                      alt="Mens Winter Leathers Jackets"
+                      width="300"
+                      class="product-img hover"
+                    />
+
+                    <p class="showcase-badge">15%</p>
+
+                    <div class="showcase-actions">
+                      <a href="ingredientDetail.html" class="btn-action">
+                        <ion-icon name="eye-outline"></ion-icon>
+                      </a>
+
+                      <a href="#" class="btn-action">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </a>
+
+                      <a href="#" class="btn-action">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Water</a>
+
+                    <a href="#">
+                      <h3 class="showcase-title">24 Count (water)</h3>
+                    </a>
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <p class="price">$48.00</p>
+                      <del>$75.00</del>
+                    </div>
+                  </div>
+                </div>
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="./asset/imgs/water.webp"
+                      alt="Mens Winter Leathers Jackets"
+                      width="300"
+                      class="product-img default"
+                    />
+                    <img
+                      src="./asset/imgs/water.webp"
+                      alt="Mens Winter Leathers Jackets"
+                      width="300"
+                      class="product-img hover"
+                    />
+
+                    <p class="showcase-badge">15%</p>
+
+                    <div class="showcase-actions">
+                      <a href="ingredientDetail.html" class="btn-action">
+                        <ion-icon name="eye-outline"></ion-icon>
+                      </a>
+
+                      <a href="#" class="btn-action">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </a>
+
+                      <a href="#" class="btn-action">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Water</a>
+
+                    <a href="#">
+                      <h3 class="showcase-title">24 Count (water)</h3>
+                    </a>
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <p class="price">$48.00</p>
+                      <del>$75.00</del>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="./asset/imgs/water.webp"
+                      alt="Mens Winter Leathers Jackets"
+                      width="300"
+                      class="product-img default"
+                    />
+                    <img
+                      src="./asset/imgs/water.webp"
+                      alt="Mens Winter Leathers Jackets"
+                      width="300"
+                      class="product-img hover"
+                    />
+
+                    <p class="showcase-badge">15%</p>
+
+                    <div class="showcase-actions">
+                      <a href="ingredientDetail.html" class="btn-action">
+                        <ion-icon name="eye-outline"></ion-icon>
+                      </a>
+
+                      <a href="#" class="btn-action">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </a>
+
+                      <a href="#" class="btn-action">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Water</a>
+
+                    <a href="#">
+                      <h3 class="showcase-title">24 Count (water)</h3>
+                    </a>
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <p class="price">$48.00</p>
+                      <del>$75.00</del>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="./asset/imgs/water.webp"
+                      alt="Mens Winter Leathers Jackets"
+                      width="300"
+                      class="product-img default"
+                    />
+                    <img
+                      src="./asset/imgs/water.webp"
+                      alt="Mens Winter Leathers Jackets"
+                      width="300"
+                      class="product-img hover"
+                    />
+
+                    <p class="showcase-badge">15%</p>
+
+                    <div class="showcase-actions">
+                      <a href="ingredientDetail.html" class="btn-action">
+                        <ion-icon name="eye-outline"></ion-icon>
+                      </a>
+
+                      <a href="#" class="btn-action">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </a>
+
+                      <a href="#" class="btn-action">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Water</a>
+
+                    <a href="#">
+                      <h3 class="showcase-title">24 Count (water)</h3>
+                    </a>
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <p class="price">$48.00</p>
+                      <del>$75.00</del>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="./asset/imgs/water.webp"
+                      alt="Mens Winter Leathers Jackets"
+                      width="300"
+                      class="product-img default"
+                    />
+                    <img
+                      src="./asset/imgs/water.webp"
+                      alt="Mens Winter Leathers Jackets"
+                      width="300"
+                      class="product-img hover"
+                    />
+
+                    <p class="showcase-badge">15%</p>
+
+                    <div class="showcase-actions">
+                      <a href="ingredientDetail.html" class="btn-action">
+                        <ion-icon name="eye-outline"></ion-icon>
+                      </a>
+
+                      <a href="#" class="btn-action">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </a>
+
+                      <a href="#" class="btn-action">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Water</a>
+
+                    <a href="#">
+                      <h3 class="showcase-title">24 Count (water)</h3>
+                    </a>
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <p class="price">$48.00</p>
+                      <del>$75.00</del>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="./asset/imgs/water.webp"
+                      alt="Mens Winter Leathers Jackets"
+                      width="300"
+                      class="product-img default"
+                    />
+                    <img
+                      src="./asset/imgs/water.webp"
+                      alt="Mens Winter Leathers Jackets"
+                      width="300"
+                      class="product-img hover"
+                    />
+
+                    <p class="showcase-badge">15%</p>
+
+                    <div class="showcase-actions">
+                      <a href="ingredientDetail.html" class="btn-action">
+                        <ion-icon name="eye-outline"></ion-icon>
+                      </a>
+
+                      <a href="#" class="btn-action">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </a>
+
+                      <a href="#" class="btn-action">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Water</a>
+
+                    <a href="#">
+                      <h3 class="showcase-title">24 Count (water)</h3>
+                    </a>
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <p class="price">$48.00</p>
+                      <del>$75.00</del>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="./asset/imgs/water.webp"
+                      alt="Mens Winter Leathers Jackets"
+                      width="300"
+                      class="product-img default"
+                    />
+                    <img
+                      src="./asset/imgs/water.webp"
+                      alt="Mens Winter Leathers Jackets"
+                      width="300"
+                      class="product-img hover"
+                    />
+
+                    <p class="showcase-badge">15%</p>
+
+                    <div class="showcase-actions">
+                      <a href="ingredientDetail.html" class="btn-action">
+                        <ion-icon name="eye-outline"></ion-icon>
+                      </a>
+
+                      <a href="#" class="btn-action">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </a>
+
+                      <a href="#" class="btn-action">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Water</a>
+
+                    <a href="#">
+                      <h3 class="showcase-title">24 Count (water)</h3>
+                    </a>
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <p class="price">$48.00</p>
+                      <del>$75.00</del>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="showcase">
+                  <div class="showcase-banner">
+                    <img
+                      src="./asset/imgs/water.webp"
+                      alt="Mens Winter Leathers Jackets"
+                      width="300"
+                      class="product-img default"
+                    />
+                    <img
+                      src="./asset/imgs/water.webp"
+                      alt="Mens Winter Leathers Jackets"
+                      width="300"
+                      class="product-img hover"
+                    />
+
+                    <p class="showcase-badge">15%</p>
+
+                    <div class="showcase-actions">
+                      <a href="ingredientDetail.html" class="btn-action">
+                        <ion-icon name="eye-outline"></ion-icon>
+                      </a>
+
+                      <a href="#" class="btn-action">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </a>
+
+                      <a href="#" class="btn-action">
+                        <ion-icon name="cart-outline"></ion-icon>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="showcase-content">
+                    <a href="#" class="showcase-category">Water</a>
+
+                    <a href="#">
+                      <h3 class="showcase-title">24 Count (water)</h3>
+                    </a>
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <p class="price">$48.00</p>
+                      <del>$75.00</del>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="mypopup">
+      <span class="btn-close">X</span>
+      <img src="./asset/images/products/clothes-1.jpg" alt="" />
+      <div class="mypopup-detail">
+        <h2 class="mypopup-title">New Discount</h2>
+        <p class="mypopup-name">Water</p>
+        <span class="mypopup-discount">20% discount only $10</span>
+      </div>
+    </div>
+
+    <div class="mycontact">
+      <img src="./asset/imgs/message-2-fill.svg" alt="">
+      <span>1</span>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./asset/vendor/js/popup.js"></script>
+    <script src="./asset//vendor/js/button.js"></script>
+    <script src="./asset/vendor/js/dropIngredient.js"></script>
+  </body>
+</html>

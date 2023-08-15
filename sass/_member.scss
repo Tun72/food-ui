@@ -1,0 +1,41 @@
+
+.member{
+    &__title{
+        @include headingWithBorderCenter;
+        padding: 10px;
+        
+    }
+    &__body{
+        margin-top: 15rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__card{
+        margin-bottom: 10rem;
+        margin-right: 3rem;
+        position: relative;
+        flex-basis: 20%;
+        // width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .img-container{
+            position: absolute;
+            top: -7rem;
+            width: 150px;
+            height: 150px;
+            background-color: antiquewhite;
+            border-radius: 50%;
+        }
+        .text-container{
+            width: 100%;
+            height: 200px;
+            background-color: orange;
+            border-radius: 20px;
+        }
+    }
+}

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="./asset/css/styleDetail.css" />
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal-close-overlay"></div>
+
+      <div class="modal-content">
+        <button class="modal-close-btn">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <div class="newsletter">
+          <div class="newsletter-header">
+            <h3 class="newsletter-title">saved items</h3>
+          </div>
+          <table class="save">
+            <tr>
+              <td>
+                <img src="./asset/images/products/jewellery-2.jpg" alt="" />
+              </td>
+              <td>Name</td>
+              <td>$1000</td>
+              <td>
+                <button class="save_btn">
+                  +<ion-icon name="cart-outline"></ion-icon
+                  >
+                </button>
+              </td>
+              <td>
+                <span class="icon"
+                  ><ion-icon name="trash-outline"></ion-icon
+                ></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-close-overlay"></div>
+
+      <div class="modal-content">
+        <button class="modal-close-btn">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <div class="newsletter">
+          <div class="newsletter-header">
+            <h3 class="newsletter-title">Cart (4 item)</h3>
+          </div>
+
+          <div class="cartAndCheck">
+            <div class="cart">
+              <div class="cart-title">
+                <h3>Pickup or delivery from store, as soon as Today</h3>
+              </div>
+              <div class="line"></div>
+
+              <div class="all-carts">
+                <div class="cart-card">
+                  <span class="cart-tag">Best Seller</span>
+                  <div class="cart-item">
+                    <div class="cart-detail">
+                      <img
+                        src="./asset/images/products/party-wear-1.jpg"
+                        alt=""
+                      />
+                      <div class="cart-name">
+                        <h3>name</h3>
+                        <span>100gram</span>
+                      </div>
+                    </div>
+                    <p class="cart-price">$400</p>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#">Remove</a>
+
+                    <div class="quantity-field">
+                      <button
+                        class="value-button decrease-button"
+                        onclick="decreaseValue(this)"
+                        title="Azalt"
+                      >
+                        -
+                      </button>
+                      <div class="number">0</div>
+                      <button
+                        class="value-button increase-button"
+                        onclick="increaseValue(this, 5)"
+                        title="Arrtır"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="cart-card">
+                  <span class="cart-tag">Best Seller</span>
+                  <div class="cart-item">
+                    <div class="cart-detail">
+                      <img
+                        src="./asset/images/products/party-wear-1.jpg"
+                        alt=""
+                      />
+                      <div class="cart-name">
+                        <h3>name</h3>
+                        <span>100gram</span>
+                      </div>
+                    </div>
+                    <p class="cart-price">$400</p>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#">Remove</a>
+
+                    <div class="quantity-field">
+                      <button
+                        class="value-button decrease-button"
+                        onclick="decreaseValue(this)"
+                        title="Azalt"
+                      >
+                        -
+                      </button>
+                      <div class="number">0</div>
+                      <button
+                        class="value-button increase-button"
+                        onclick="increaseValue(this, 5)"
+                        title="Arrtır"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="cart-card">
+                  <span class="cart-tag">Best Seller</span>
+                  <div class="cart-item">
+                    <div class="cart-detail">
+                      <img
+                        src="./asset/images/products/party-wear-1.jpg"
+                        alt=""
+                      />
+                      <div class="cart-name">
+                        <h3>name</h3>
+                        <span>100gram</span>
+                      </div>
+                    </div>
+                    <p class="cart-price">$400</p>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#">Remove</a>
+
+                    <div class="quantity-field">
+                      <button
+                        class="value-button decrease-button"
+                        onclick="decreaseValue(this)"
+                        title="Azalt"
+                      >
+                        -
+                      </button>
+                      <div class="number">0</div>
+                      <button
+                        class="value-button increase-button"
+                        onclick="increaseValue(this, 5)"
+                        title="Arrtır"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="line"></div>
+                <div class="cart-card">
+                  <span class="cart-tag">Best Seller</span>
+                  <div class="cart-item">
+                    <div class="cart-detail">
+                      <img
+                        src="./asset/images/products/party-wear-1.jpg"
+                        alt=""
+                      />
+                      <div class="cart-name">
+                        <h3>name</h3>
+                        <span>100gram</span>
+                      </div>
+                    </div>
+                    <p class="cart-price">$400</p>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#">Remove</a>
+
+                    <div class="quantity-field">
+                      <button
+                        class="value-button decrease-button"
+                        onclick="decreaseValue(this)"
+                        title="Azalt"
+                      >
+                        -
+                      </button>
+                      <div class="number">0</div>
+                      <button
+                        class="value-button increase-button"
+                        onclick="increaseValue(this, 5)"
+                        title="Arrtır"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="checkout">
+              <a href="checkout.html" class="checkout-btn"
+                >Continue to checkout</a
+              >
+              <div class="line"></div>
+              <div class="checkout-detail">
+                <div class="checkout-total">
+                  <h4>Subtotal(4 items)</h4>
+                  <p>$400</p>
+                </div>
+                <div class="checkout-discount">
+                  <h4>Tax</h4>
+                  <p>$40</p>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="checkout-overall">
+                <h4>Estimated total</h4>
+                <p class="price">$440</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <div class="header-main">
+        <div class="header-container">
+          <a href="home.html" class="header-logo"> Some Logo </a>
+
+          <nav class="desktop-navigation-menu">
+            <div class="header-container">
+              <ul class="desktop-menu-category-list">
+                <li class="menu-category">
+                  <a href="rescipeMainpage.html" class="menu-title"
+                    >Food Recipes</a
+                  >
+                </li>
+
+                <li class="menu-category">
+                  <a href="ingredientMainpage.html" class="menu-title"
+                    >Ingredients</a
+                  >
+                </li>
+
+                <li class="menu-category">
+                  <a href="rescipeMainpage.html" class="menu-title">Pizza</a>
+
+                  <ul class="dropdown-list">
+                    <li class="dropdown-item">
+                      <a href="#">Shirt</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Shorts & Jeans</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Safety Shoes</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Wallet</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="menu-category">
+                  <a href="#" class="menu-title">Traditional</a>
+
+                  <ul class="dropdown-list">
+                    <li class="dropdown-item">
+                      <a href="#">Clothes Perfume</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Deodorant</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Flower Fragrance</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Air Freshener</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-category">
+                  <a href="history.html" class="menu-title">History</a>
+                </li>
+
+                <li class="menu-category">
+                  <a href="#" class="menu-title">About</a>
+                </li>
+
+                <li class="menu-category">
+                  <a href="#" class="menu-title">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="header-user-actions">
+            <!-- <a href="authenticate.html" class="action-btn"
+              ><ion-icon name="log-in-outline"></ion-icon
+            ></a> -->
+
+            <div class="action-btn user-dropdown">
+              <ion-icon name="person-outline" class="user-icon"></ion-icon>
+              <ul class="user-list">
+                <li class="user-item">
+                  <a href="userProfile.html">Account</a>
+                </li>
+
+                <li class="user-item">
+                  <a href="#">Logout</a>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="action-btn btn-popup">
+              <ion-icon name="heart-outline"></ion-icon>
+              <span class="count">0</span>
+            </a>
+
+            <a href="#" class="action-btn btn-popup">
+              <ion-icon name="bag-handle-outline"></ion-icon>
+              <span class="count">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="checkout_bill">
+      <header class="checkout-header">
+        <h1 class="checkout-title">Checkout</h1>
+      </header>
+
+      <form action="https://httpbin.org/post" class="form" method="POST">
+        <h3 class="">Address</h3>
+        <div class="form-div">
+          <input type="text" name="city" id="city" placeholder="City" />
+          <input type="text" name="address" id="address" placeholder="Addess" />
+          <input type="text" name="zip" id="zip" placeholder="Zip Code" />
+        </div>
+
+        <fieldset>
+          <legend class="form__legend">Payment Method</legend>
+
+          <div class="form__radios">
+            <div class="form__radio">
+              <label for="visa"
+                ><ion-icon name="card-outline" class="icons"></ion-icon>Visa Payment</label
+              >
+              <input checked id="visa" name="payment-method" type="radio" />
+            </div>
+
+            <div class="form__radio">
+              <label for="paypal"
+                ><ion-icon name="logo-paypal" class="icons"></ion-icon>PayPal</label
+              >
+              <input id="paypal" name="payment-method" type="radio" />
+            </div>
+
+            <div class="form__radio">
+              <label for="cod"
+                ><ion-icon name="wallet-outline" class="icons"></ion-icon> Cash On
+                Delivery</label
+              >
+              <input id="cod" name="payment-method" type="radio" />
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="shipping__bill">
+          <h2>Shopping Bill</h2>
+
+          <div class="shipping__total">
+            <div class="shipping-1">
+              <p>Shipping fee</p>
+              <p>$440</p>
+            </div>
+            <div class="shipping-2">
+              <p>Discount 10%</p>
+              <p>$40</p>
+            </div>
+            <div class="shipping-2">
+              <p>Total price</p>
+              <p>$500</p>
+            </div>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="ship_total">
+            <p>Total</p>
+            <p>$4400</p>
+          </div>
+        </div>
+
+        <div>
+          <button class="button button--full" type="submit">Buy Now</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="order-success">
+        <h2>Successfully Ordered </h2>
+
+        <a href="#">your recipes</a>
+    </div>
+
+    <symbol id="icon-paypal" viewBox="0 0 491.2 491.2">
+      <path
+        d="m392.049 36.8c-22.4-25.6-64-36.8-116-36.8h-152.8c-10.4 0-20 8-21.6 18.4l-64 403.2c-1.6 8 4.8 15.2 12.8 15.2h94.4l24-150.4-.8 4.8c1.6-10.4 10.4-18.4 21.6-18.4h44.8c88 0 156.8-36 176.8-139.2.8-3.2.8-6.4 1.6-8.8-2.4-1.6-2.4-1.6 0 0 5.6-38.4 0-64-20.8-88"
+        fill="#263b80"
+      />
+      <path
+        d="m412.849 124.8c-.8 3.2-.8 5.6-1.6 8.8-20 103.2-88.8 139.2-176.8 139.2h-44.8c-10.4 0-20 8-21.6 18.4l-29.6 186.4c-.8 7.2 4 13.6 11.2 13.6h79.2c9.6 0 17.6-7.2 19.2-16l.8-4 15.2-94.4.8-5.6c1.6-9.6 9.6-16 19.2-16h12c76.8 0 136.8-31.2 154.4-121.6 7.2-37.6 3.2-69.6-16-91.2-6.4-7.2-13.6-12.8-21.6-17.6"
+        fill="#139ad6"
+      />
+      <path
+        d="m391.249 116.8c-3.2-.8-6.4-1.6-9.6-2.4s-6.4-1.6-10.4-1.6c-12-2.4-25.6-3.2-39.2-3.2h-119.2c-3.2 0-5.6.8-8 1.6-5.6 2.4-9.6 8-10.4 14.4l-25.6 160.8-.8 4.8c1.6-10.4 10.4-18.4 21.6-18.4h44.8c88 0 156.8-36 176.8-139.2.8-3.2.8-6.4 1.6-8.8-4.8-2.4-10.4-4.8-16.8-7.2-1.6 0-3.2-.8-4.8-.8"
+        fill="#232c65"
+      />
+      <path
+        d="m275.249 0h-152c-10.4 0-20 8-21.6 18.4l-36.8 230.4 246.4-246.4c-11.2-1.6-23.2-2.4-36-2.4z"
+        fill="#2a4dad"
+      />
+      <path
+        d="m441.649 153.6c-2.4-4-4-8-7.2-12-5.6-6.4-13.6-12-21.6-16.8-.8 3.2-.8 5.6-1.6 8.8-20 103.2-88.8 139.2-176.8 139.2h-44.8c-10.4 0-20 8-21.6 18.4l-25.6 161.6z"
+        fill="#0d7dbc"
+      />
+      <path
+        d="m50.449 436.8h94.4l23.2-145.6c0-2.4.8-4 1.6-5.6l-131.2 131.2-.8 4.8c-.8 8 4.8 15.2 12.8 15.2z"
+        fill="#232c65"
+      />
+      <path
+        d="m246.449 0h-123.2c-3.2 0-5.6.8-8 1.6l-12 12c-.8 1.6-1.6 3.2-1.6 4.8l-24 150.4z"
+        fill="#436bc4"
+      />
+      <path
+        d="m450.449 232.8c2.4-12 3.2-23.2 3.2-34.4l-156 156c76-.8 135.2-32 152.8-121.6z"
+        fill="#0cb2ed"
+      />
+      <path
+        d="m248.849 471.2 12.8-80-100 100h68c9.6 0 17.6-7.2 19.2-16z"
+        fill="#0cb2ed"
+      />
+      <g fill="#33e2ff" opacity=".6">
+        <path
+          d="m408.049 146.4 45.6 45.6c0-5.6-1.6-11.2-2.4-16.8l-40-40c-1.6 4-2.4 7.2-3.2 11.2z"
+        />
+        <path
+          d="m396.849 180c-1.6 3.2-3.2 6.4-4.8 9.6l55.2 55.2c.8-4 1.6-8 2.4-12z"
+        />
+        <path
+          d="m431.249 287.2c1.6-3.2 3.2-6.4 4.8-9.6l-60.8-60.8c-2.4 2.4-4 5.6-6.4 8z"
+        />
+        <path
+          d="m335.249 250.4 69.6 69.6 7.2-7.2-68-68c-3.2 1.6-5.6 3.2-8.8 5.6z"
+        />
+        <path
+          d="m292.849 266.4 76 76c3.2-1.6 6.4-3.2 9.6-4.8l-74.4-74.4c-4 .8-7.2 2.4-11.2 3.2z"
+        />
+        <path
+          d="m320.849 353.6c4-.8 8.8-.8 12.8-1.6l-80-80c-4.8 0-8.8.8-13.6.8z"
+        />
+        <path
+          d="m196.049 272.8h-6.4c-2.4 0-4.8.8-6.4.8l86.4 87.2c2.4-2.4 5.6-4.8 8.8-5.6z"
+        />
+        <path d="m164.049 314.4 94.4 94.4 2.4-12.8-94.4-94.4z" />
+        <path d="m156.049 364.8 94.4 94.4 2.4-12-94.4-94.4z" />
+        <path d="m150.449 403.2-1.6 12.8 75.2 75.2h5.6c2.4 0 4.8-.8 7.2-1.6z" />
+        <path d="m140.049 466.4 24.8 24.8h14.4l-36.8-36.8z" />
+      </g>
+    </symbol>
+  </body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+  <script src="./asset/vendor/js/popup.js"></script>
+  <script src="./asset//vendor/js/button.js"></script>
+</html>

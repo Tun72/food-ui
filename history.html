@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History</title>
+    <link rel="stylesheet" href="./asset/css/styleDetail.css" />
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal-close-overlay"></div>
+
+      <div class="modal-content">
+        <button class="modal-close-btn">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <div class="newsletter">
+          <div class="newsletter-header">
+            <h3 class="newsletter-title">saved items</h3>
+          </div>
+          <table class="save">
+            <tr>
+              <td>
+                <img src="./asset/images/products/jewellery-2.jpg" alt="" />
+              </td>
+              <td>Name</td>
+              <td>$1000</td>
+              <td>
+                <button class="save_btn">
+                  +<ion-icon name="cart-outline"></ion-icon>
+                </button>
+              </td>
+              <td>
+                <span class="icon"
+                  ><ion-icon name="trash-outline"></ion-icon
+                ></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-close-overlay"></div>
+
+      <div class="modal-content">
+        <button class="modal-close-btn">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <div class="newsletter">
+          <div class="newsletter-header">
+            <h3 class="newsletter-title">Cart (4 item)</h3>
+          </div>
+
+          <div class="cartAndCheck">
+            <div class="cart">
+              <div class="cart-title">
+                <h3>Pickup or delivery from store, as soon as Today</h3>
+              </div>
+              <div class="line"></div>
+
+              <div class="all-carts">
+                <div class="cart-card">
+                  <span class="cart-tag">Best Seller</span>
+                  <div class="cart-item">
+                    <div class="cart-detail">
+                      <img
+                        src="./asset/images/products/party-wear-1.jpg"
+                        alt=""
+                      />
+                      <div class="cart-name">
+                        <h3>name</h3>
+                        <span>100gram</span>
+                      </div>
+                    </div>
+                    <p class="cart-price">$400</p>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#">Remove</a>
+
+                    <div class="quantity-field">
+                      <button
+                        class="value-button decrease-button"
+                        onclick="decreaseValue(this)"
+                        title="Azalt"
+                      >
+                        -
+                      </button>
+                      <div class="number">0</div>
+                      <button
+                        class="value-button increase-button"
+                        onclick="increaseValue(this, 5)"
+                        title="Arrtır"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="cart-card">
+                  <span class="cart-tag">Best Seller</span>
+                  <div class="cart-item">
+                    <div class="cart-detail">
+                      <img
+                        src="./asset/images/products/party-wear-1.jpg"
+                        alt=""
+                      />
+                      <div class="cart-name">
+                        <h3>name</h3>
+                        <span>100gram</span>
+                      </div>
+                    </div>
+                    <p class="cart-price">$400</p>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#">Remove</a>
+
+                    <div class="quantity-field">
+                      <button
+                        class="value-button decrease-button"
+                        onclick="decreaseValue(this)"
+                        title="Azalt"
+                      >
+                        -
+                      </button>
+                      <div class="number">0</div>
+                      <button
+                        class="value-button increase-button"
+                        onclick="increaseValue(this, 5)"
+                        title="Arrtır"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="cart-card">
+                  <span class="cart-tag">Best Seller</span>
+                  <div class="cart-item">
+                    <div class="cart-detail">
+                      <img
+                        src="./asset/images/products/party-wear-1.jpg"
+                        alt=""
+                      />
+                      <div class="cart-name">
+                        <h3>name</h3>
+                        <span>100gram</span>
+                      </div>
+                    </div>
+                    <p class="cart-price">$400</p>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#">Remove</a>
+
+                    <div class="quantity-field">
+                      <button
+                        class="value-button decrease-button"
+                        onclick="decreaseValue(this)"
+                        title="Azalt"
+                      >
+                        -
+                      </button>
+                      <div class="number">0</div>
+                      <button
+                        class="value-button increase-button"
+                        onclick="increaseValue(this, 5)"
+                        title="Arrtır"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="line"></div>
+                <div class="cart-card">
+                  <span class="cart-tag">Best Seller</span>
+                  <div class="cart-item">
+                    <div class="cart-detail">
+                      <img
+                        src="./asset/images/products/party-wear-1.jpg"
+                        alt=""
+                      />
+                      <div class="cart-name">
+                        <h3>name</h3>
+                        <span>100gram</span>
+                      </div>
+                    </div>
+                    <p class="cart-price">$400</p>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#">Remove</a>
+
+                    <div class="quantity-field">
+                      <button
+                        class="value-button decrease-button"
+                        onclick="decreaseValue(this)"
+                        title="Azalt"
+                      >
+                        -
+                      </button>
+                      <div class="number">0</div>
+                      <button
+                        class="value-button increase-button"
+                        onclick="increaseValue(this, 5)"
+                        title="Arrtır"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="checkout">
+              <a href="checkout.html" class="checkout-btn"
+                >Continue to checkout</a
+              >
+              <div class="line"></div>
+              <div class="checkout-detail">
+                <div class="checkout-total">
+                  <h4>Subtotal(4 items)</h4>
+                  <p>$400</p>
+                </div>
+                <div class="checkout-discount">
+                  <h4>Tax</h4>
+                  <p>$40</p>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="checkout-overall">
+                <h4>Estimated total</h4>
+                <p class="price">$440</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <div class="header-main">
+        <div class="header-container">
+          <a href="home.html" class="header-logo"> Some Logo </a>
+
+          <nav class="desktop-navigation-menu">
+            <div class="header-container">
+              <ul class="desktop-menu-category-list">
+                <li class="menu-category">
+                  <a href="rescipeMainpage.html" class="menu-title"
+                    >Food Recipes</a
+                  >
+                </li>
+
+                <li class="menu-category">
+                  <a href="ingredientMainpage.html" class="menu-title"
+                    >Ingredients</a
+                  >
+                </li>
+
+                <li class="menu-category">
+                  <a href="rescipeMainpage.html" class="menu-title">Pizza</a>
+
+                  <ul class="dropdown-list">
+                    <li class="dropdown-item">
+                      <a href="#">Shirt</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Shorts & Jeans</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Safety Shoes</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Wallet</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="menu-category">
+                  <a href="#" class="menu-title">Traditional</a>
+
+                  <ul class="dropdown-list">
+                    <li class="dropdown-item">
+                      <a href="#">Clothes Perfume</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Deodorant</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Flower Fragrance</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                      <a href="#">Air Freshener</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="menu-category">
+                  <a href="history.html" class="menu-title">History</a>
+                </li>
+
+                <li class="menu-category">
+                  <a href="#" class="menu-title">About</a>
+                </li>
+
+                <li class="menu-category">
+                  <a href="#" class="menu-title">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="header-user-actions">
+            <!-- <a href="authenticate.html" class="action-btn"
+                ><ion-icon name="log-in-outline"></ion-icon
+              ></a> -->
+
+            <div class="action-btn user-dropdown">
+              <ion-icon name="person-outline" class="user-icon"></ion-icon>
+              <ul class="user-list">
+                <li class="user-item">
+                  <a href="userProfile.html">Account</a>
+                </li>
+
+                <li class="user-item">
+                  <a href="#">Logout</a>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="action-btn btn-popup">
+              <ion-icon name="heart-outline"></ion-icon>
+              <span class="count">0</span>
+            </a>
+
+            <a href="#" class="action-btn btn-popup">
+              <ion-icon name="bag-handle-outline"></ion-icon>
+              <span class="count">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-container">
+      <h2 class="history_header">Your Order</h2>
+      <ul class="responsive-table">
+        <li class="table-header">
+          <div class="col col-4">Product Id</div>
+          <div class="col col-4">Customer Name</div>
+          <div class="col col-4">Quantity</div>
+          <div class="col col-4">Price</div>
+          <div class="col col-4">Address</div>
+
+          <div class="col col-4">Payment</div>
+          <div class="col col-4">Status</div>
+          <div class="col col-4">Recipes</div>
+        </li>
+        <li class="table-row">
+          <div class="col col-4" data-label="Product Id">42235</div>
+          <div class="col col-4" data-label="Name">John Doe</div>
+          <div class="col col-4" data-label="Quantity">10</div>
+          <div class="col col-4" data-label="Price">$350</div>
+          <div class="col col-4" data-label="Address">Yangon, Tharkayta</div>
+
+          <div class="col col-4" data-label="Payment">Cash On Delivery</div>
+          <div class="col col-4" data-label="Status">Pending</div>
+          <div class="col col-4" data-label="Recipes">
+            <a href="#">recipe</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+  <script src="./asset/vendor/js/popup.js"></script>
+  <script src="./asset//vendor/js/button.js"></script>
+</html>
