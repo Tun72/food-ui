@@ -2,54 +2,19 @@
   #SIDEBAR
 \*-----------------------------------*/
 
-.sidebar {
-    background: var(--white);
-    position: fixed;
-    top: 0;
-    left: -100%;
-    bottom: 0;
-    width: 100%;
-    max-width: 320px;
-    padding: 30px;
-    overflow-y: scroll;
-    -ms-scroll-chaining: none;
-    overscroll-behavior: contain;
-    visibility: hidden;
-    -webkit-transition: 0.5s ease;
-    -o-transition: 0.5s ease;
-    transition: 0.5s ease;
-    z-index: 20;
-  }
-  
+
   .sidebar.active {
     left: 0;
     visibility: visible;
   }
   
   .sidebar-category {
-    // margin-bottom: 15px;
     padding-bottom: 15px;
     font-size: var(--fs-6);
-    margin: 0 !important;
-    border: none !important;
+    border: none;
     // border-bottom: 1px solid var(--cultured);
   }
   
-  .sidebar-top {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-bottom: 10px;
-  }
   
   .sidebar-title {
     color: var(--onyx);
@@ -152,96 +117,35 @@
     text-transform: capitalize;
   }
   
-  .sidebar-accordion-menu.active .add-icon,
-  .sidebar-accordion-menu .remove-icon {
-    display: none;
-  }
-  
-  .sidebar-accordion-menu .add-icon,
-  .sidebar-accordion-menu.active .remove-icon {
-    display: block;
-  }
-  
-  .sidebar .showcase-heading {
-    font-size: var(--fs-5);
-    font-weight: var(--weight-600);
-    color: var(--onyx);
-    text-transform: uppercase;
-    letter-spacing: 0.08rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .sidebar .showcase {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  
-  .sidebar .showcase:not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
-  
-  .sidebar .showcase-img {
-    -webkit-border-radius: var(--border-radius-sm);
-    border-radius: var(--border-radius-sm);
-  }
-  
-  .sidebar .showcase-content {
-    width: -webkit-calc(100% - 9rem);
-    width: calc(100% - 9rem);
-  }
-  
-  .sidebar .showcase-title {
-    color: var(--onyx);
-    font-size: var(--fs-7);
-    font-weight: var(--weight-400);
-    text-transform: capitalize;
-    overflow: hidden;
-    white-space: nowrap;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    letter-spacing: 0.05rem;
-  }
-  
-  .sidebar .showcase-rating {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    color: var(--sandy-brown);
-    font-size: 1.3rem;
-    padding: 0.4rem 0;
-  }
-  
-  .sidebar .price-box {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  
-  .sidebar .price-box del {
-    color: var(--sonic-silver);
-    font-size: 1.3rem;
-  }
-  
-  .sidebar .price-box .price {
-    font-size: var(--fs-7);
-    font-weight: var(--weight-600);
-    color: var(--davys-gray);
-  }
+
+
+.sidebar {
+  --fs-5: 0.941rem;
+  position: -webkit-sticky;
+  position: fixed;
+  top: 30px;
+  left: 0;
+  padding: 0;
+  min-width: -webkit-calc(25% - 15px);
+  min-width: calc(25% - 15px);
+  margin-bottom: 3rem;
+  visibility: visible;
+  overflow-y: auto;
+  -ms-scroll-chaining: chained;
+  overscroll-behavior: auto;
+  z-index: 0;
+ 
+}
+
+.sidebar-category {
+  padding: 2rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--cultured);
+  -webkit-border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-md);
+  background: #fff;
+}
+
+.sidebar-close-btn {
+  display: none;
+}

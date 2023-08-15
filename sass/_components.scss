@@ -96,9 +96,9 @@
 }
 
 .arrow {
-    width: 30vw;
+    width: 23vw;
     height: 2px;
-    background: rgba(255, 166, 0, 0.105);
+    background: rgba(255, 166, 0, 0.253);
     display: inline-block;
     position: absolute;
     z-index: -1;
@@ -244,4 +244,21 @@
         justify-content: center;
     }
 
+}
+
+.mytag {
+    position: absolute;
+    left: 0;
+    bottom: 10rem;
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    gap: 2rem;
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    border-radius: 0 50px 50px 0;
+    font-size: 1.5rem;
+    
+    background: orange;
+    color: #fff;
+    z-index: 100;
 }

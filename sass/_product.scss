@@ -16,37 +16,6 @@
       margin-bottom: 3rem;
   }
 
-  .sidebar {
-      --fs-5: 0.941rem;
-
-      position: -webkit-sticky;
-
-      position: sticky;
-      top: 30px;
-      left: 0;
-      padding: 0;
-      min-width: -webkit-calc(25% - 15px);
-      min-width: calc(25% - 15px);
-      margin-bottom: 3rem;
-      visibility: visible;
-      overflow-y: auto;
-      -ms-scroll-chaining: chained;
-      overscroll-behavior: auto;
-      z-index: 0;
-  }
-
-  .sidebar-category {
-      padding: 2rem;
-      margin-bottom: 3rem;
-      border: 1px solid var(--cultured);
-      -webkit-border-radius: var(--border-radius-md);
-      border-radius: var(--border-radius-md);
-  }
-
-  .sidebar-close-btn {
-      display: none;
-  }
-
   .product-box {
       min-width: -webkit-calc(75% - 15px);
       min-width: calc(75% - 15px);

@@ -68,6 +68,14 @@
   }
 }
 
+.img_dot {
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  transform: translateY(-50%);
+
+}
+
 
 .header {
   width: 100%;
