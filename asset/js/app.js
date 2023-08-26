@@ -12,8 +12,6 @@ const categoriesList = document.querySelector(".categories-list");
 const btnCategories = document.querySelector(".btn-categories");
 const sortBtn = document.querySelector(".btn-sort");
 
-const token = localStorage.getItem("token") || null;
-
 const closeModal = function () {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
@@ -225,6 +223,7 @@ const renderMarkupDetail = async function (data) {
 
 const renderIngredients = async function (ingredients) {
   let data = null;
+  const token = localStorage.getItem("token") || null;
   try {
     const result = await fetch(
       `http://localhost:4000/api/ingredients/check-by-name`,

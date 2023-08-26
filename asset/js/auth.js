@@ -1,4 +1,4 @@
-import { url } from "./helper";
+const url = "https://food-recipe-admin-server-ae75c769cee1.herokuapp.com" // "http://localhost:4000" // 
 
 
 const signUp = document.querySelector(".signUp");
