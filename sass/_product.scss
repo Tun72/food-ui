@@ -82,6 +82,8 @@
       position: relative;
   }
 
+
+
   .product-grid .product-img {
       width: 100%;
       height: 100%;
@@ -174,6 +176,19 @@
       border-color: var(--eerie-black);
   }
 
+  .product-grid .btn-active {
+      background: var(--eerie-black);
+      color: var(--white);
+      border-color: var(--eerie-black);
+
+      &:hover {
+        background: var(--white);
+        color: var(--sonic-silver);
+      }
+  }
+
+
+
   .product-grid .showcase-content {
       padding: 1.5rem 2rem 0;
   }
@@ -199,6 +214,7 @@
   .product-grid .showcase-title:hover {
       color: var(--eerie-black);
   }
+
 
   .product-grid .showcase-rating {
       display: flex;

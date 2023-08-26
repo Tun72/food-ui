@@ -19,7 +19,7 @@ const addToPost = async (country = "American") => {
               <h3 class="teartiary__heading">${food.strMeal}</h3>
               <div class="meal__info">
                 <p class="meal__type">${country}</p>
-                <a href="rescipeMainpage.html" class="meal__button">
+                <a href="rescipeMainpage.html?name=${country}" class="meal__button">
                 <ion-icon name="fast-food-outline"></ion-icon>
                 </a>
               </div>
@@ -65,10 +65,16 @@ mealSection.addEventListener("click", function (e) {
       addToPost(e.target.innerText);
     }, 1500);
   }
+
+  const mealCloset = e.target.closest(".meal__info");
+  if (mealCloset) {
+    window.location.href = mealCloset.querySelector(".meal__button").href;
+  }
 });
 
 mealPost.addEventListener("animationend", function (e) {
   mealPost.classList.remove("meal__effect");
 });
+
 addToList();
 addToPost();

@@ -9,7 +9,7 @@
   <body>
     <div class="container" id="container">
       <div class="form-container sign-up-container">
-        <form action="#">
+        <form action="#" class="signUp">
           <h1>Create Account</h1>
           <div class="social-container">
             <a href="#" class="social"
@@ -23,15 +23,26 @@
             ></a>
           </div>
           <span>or use your email for registration</span>
-          <input type="text" placeholder="Name" name="name" />
-          <input type="email" placeholder="Email" name="email" />
-          <input type="tel" name="phone" id="phone" placeholder="Phone">
-          <input type="password" placeholder="Password" name="password" />
+          <input type="text" placeholder="Name" name="name" class="name" />
+          <input type="email" placeholder="Email" name="email" class="email" />
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            class="password"
+          />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            name="confPassword"
+            class="confPassword"
+          />
+
           <button>Sign Up</button>
         </form>
       </div>
       <div class="form-container sign-in-container">
-        <form action="#">
+        <form action="#" class="login">
           <h1>Sign in</h1>
           <div class="social-container">
             <a href="#" class="social"
@@ -78,5 +89,7 @@
     src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
   ></script>
 
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="./asset/vendor/js/loginForm.js"></script>
+  <script src="./asset/js/auth.js"></script>
 </html>

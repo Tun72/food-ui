@@ -106,6 +106,7 @@ fieldset {
     justify-content: center;
     padding-block: 0.5em;
     padding-inline: 1em;
+    margin-bottom: 1rem;
 }
 
 .icon {
@@ -185,4 +186,18 @@ fieldset {
 
 .order-success a{
     text-decoration: underline;
+}
+
+.checkout-result {
+    display: flex;
+    // flex-direction: column;
+    gap: 2rem;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    img {
+        width: 8rem;
+        height: 8rem;
+    }
 }

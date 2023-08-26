@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #dad9d9ea;
+    font-family: sans-serif;
+}
+.team-container{
+    width: 100%;
+    height: auto;
+
+}
+.text{
+    color: rgb(13, 6, 6);
+    font-size: 25px;
+    margin-top: 40px;
+
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+
+
+}
+.row{
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    /* border: 1px solid black;
+    border-radius: 20px; */
+}
+
+.profile-card{
+    background-color: #ffffff;
+    width: 270px;
+    height: 250px;
+    margin: 20px 10px 10px 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+  
+}
+.profile-content{
+    padding: 15px;
+    
+}
+img{
+    width: 80px;
+    height: 80px;
+    border-radius: 150px;
+
+}
+.profile-image{
+    text-align: center;
+
+}
+.desc{
+    text-align: center;
+}
+.desc h2{
+    color: aqua;
+    font-size: 20px;
+
+}
+.desc p{
+    font-size: 13px;
+    line-height: 1.3em;
+    margin-top: -10px;
+    color: black;
+
+}
+.btn-div{
+    text-align: center;
+}
+.btn{
+    background-color: aquamarine;
+    color: #ffffff;
+    width: 150px;
+    cursor: pointer;
+    height: 38px;
+    font-size: 13px;
+    font-family: 600px;
+    box-shadow: 3px 3px 3px 3px cyan;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+
+}

@@ -353,34 +353,22 @@
       </div>
     </header>
 
-    <section class="section-container">
-      <h2 class="history_header">Your Order</h2>
-      <ul class="responsive-table">
-        <li class="table-header">
-          <div class="col col-4">Product Id</div>
-          <div class="col col-4">Customer Name</div>
-          <div class="col col-4">Quantity</div>
-          <div class="col col-4">Price</div>
-          <div class="col col-4">Address</div>
-
-          <div class="col col-4">Payment</div>
-          <div class="col col-4">Status</div>
-          <div class="col col-4">Recipes</div>
-        </li>
-        <li class="table-row">
-          <div class="col col-4" data-label="Product Id">42235</div>
-          <div class="col col-4" data-label="Name">John Doe</div>
-          <div class="col col-4" data-label="Quantity">10</div>
-          <div class="col col-4" data-label="Price">$350</div>
-          <div class="col col-4" data-label="Address">Yangon, Tharkayta</div>
-
-          <div class="col col-4" data-label="Payment">Cash On Delivery</div>
-          <div class="col col-4" data-label="Status">Pending</div>
-          <div class="col col-4" data-label="Recipes">
-            <a href="#">recipe</a>
-          </div>
-        </li>
-      </ul>
+    <section class="mytable">
+      <main class="table">
+        <section class="table__header">
+          <h1>Customer's Orders</h1>
+        </section>
+        <section class="table__body">
+          <table>
+            <thead class="mytable__header">
+              
+            </thead>
+            <tbody class="mytable__body">
+              
+            </tbody>
+          </table>
+        </section>
+      </main>
     </section>
   </body>
   <script
@@ -393,4 +381,6 @@
   ></script>
   <script src="./asset/vendor/js/popup.js"></script>
   <script src="./asset//vendor/js/button.js"></script>
+  <script type="module" src="./asset/js/checkLogin.js"></script>
+  <script type="module" src="./asset/js/history.js"></script>
 </html>
