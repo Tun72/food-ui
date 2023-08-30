@@ -56,12 +56,12 @@
 
             span {
                 //test
-                border: 1px solid skyblue;
+                border: 1px solid $color-secondary;
                 padding: 3px 4px;
 
                 a {
                     //test
-                    color: skyblue !important;
+                    color: $color-secondary !important;
                 }
             }
         }
@@ -73,7 +73,7 @@
             margin-bottom: 1rem;
 
             //test 
-            color: #333;
+            color: $color-secondary;
 
         }
 
@@ -93,7 +93,7 @@
             font-weight: 600;
             // letter-spacing: 1px;
             // test 
-            color: #333;
+            color: $color-secondary;
             margin-bottom: $margin-bottom-sm1;
 
         }
@@ -102,7 +102,7 @@
             font-size: 1.8rem;
 
             // test
-            color: gray;
+            color: $color-secondary;
             letter-spacing: 1;
             font-weight: 600;
         }
@@ -129,7 +129,7 @@
             padding: 0.5rem 7rem;
             // test
             color: #fff;
-            background: green;
+            background: $color-primary;
             border-radius: 3rem;
             margin-bottom: $margin-bottom-sm1;
         }
@@ -236,16 +236,17 @@
         display: block;
 
         // test
-        color: #000;
+        color: $color-primary;
     }
 
     .similar-caption {
         font-size: 1.4rem;
 
         // test 
-        color: grey;
+        color: black;
         font-weight: 600;
         letter-spacing: 1px;
+        opacity: 0.6;
     }
 
 
@@ -313,6 +314,7 @@
             &__price {
                 font-size: 1.8rem;
                 font-weight: 600;
+                color: $color-secondary;
 
                 span {
                     margin-left: 1rem;
@@ -320,7 +322,7 @@
                     letter-spacing: 1px;
 
                     // test 
-                    color: grey;
+                    color: gray;
                 }
 
             }
@@ -351,7 +353,7 @@
                 span {
 
                     // test
-                    background: skyblue;
+                    background: $color-primary;
                     color: #fff;
                     font-size: 1.4rem;
                     padding: 0.3rem 0.4rem;
@@ -386,7 +388,7 @@
 
                 &:hover {
                     color: #fff;
-                    background: #000;
+                    background: $color-secondary;
                 }
             }
 

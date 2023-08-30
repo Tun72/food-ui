@@ -23,7 +23,7 @@
     &-icon {
         flex: 0 0 18rem;
         height: 18rem;
-        background: #e7b3b3;
+        background: $color-primary;
         position: relative;
         display: flex;
         justify-content: center;
@@ -41,7 +41,7 @@
         font-size: 2rem;
         align-items: center;
         justify-content:center;
-        color: orange;
+        color: $color-secondary;
         font-weight: 600;
         span{
             display: block;
@@ -81,10 +81,11 @@
         .feature-caption{
             margin-top: 1rem;
             font-size: 2rem;
-            color: $title-border-color;
+            color: $color-secondary;
             font-weight: 700;
         }
         .feature-text{
+            text-align: center;
             margin-top: 1rem;
             font-size: 1.4rem;
         }

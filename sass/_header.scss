@@ -65,45 +65,48 @@
   }
 
   &__heading {
+    margin-top: 2.5rem;
     display: inline-block;
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     margin-bottom: 20px;
-    // width: 30%;
-    // flex: 0 0 10%;
+    line-height: 4rem;
+    color: $color-secondary;
+    font-weight: 700;
   }
-
   &__form {
-    background: #575151;
+    background: #f8f8f8;
     display: flex;
     justify-content: space-between;
     padding: .4rem;
+    box-shadow: 0 1px 10px #00000020;
 
 
     &--input {
       border: none;
-      color: rgba(255, 255, 255, 0.822);
-      font-weight: 500;
-      padding: 1.2rem 1.2rem 1.2rem 3rem;
+      color: $color-secondary;
+      padding: 1.2rem 1.2rem 1.2rem 1.3rem;
       flex: 1;
       outline: none;
       background: transparent;
+      font-size: 1.6rem;
+       font-weight: 500;
 
       &::placeholder {
-        color: white;
+        color: $color-secondary;
         font-size: 1.6rem;
         font-weight: 700;
-        opacity: 0.7;
+        opacity: 0.5;
       }
     }
 
     &--go-button {
       border-radius: 100px 5px 5px 5px;
-      background: orange;
+      background-color: $color-primary;
       padding: 1.2rem 6rem;
       border: none;
       flex: 0 0 30%;
       font-size: 2rem;
-      color: $color-grad-1;
+      color: white;
 
       cursor: pointer;
     }
@@ -113,8 +116,8 @@
   &__right {
     flex: 0 0 30%;
     height: 100%;
-    background: orange;
     position: relative;
+    background-color: $color-primary;
   }
 
   &__dish {
@@ -157,7 +160,7 @@
 }
 
 .header-main {
-  padding: 2.5rem 0;
+  padding: 2rem 0;
 }
 
 .header-main .header-container {
@@ -202,7 +205,7 @@
   justify-content: center;
   gap: 1rem;
 
-  color: orange !important;
+  color: $color-primary !important;
   font-size: 3.3rem;
   font-family:'Qwitcher Grypen', cursive;
 
@@ -241,7 +244,7 @@
   position: absolute;
   top: -2px;
   right: -3px;
-  background: var(--bittersweet);
+  background: $color-secondary!important;
   color: var(--white);
   font-size: 12px;
   font-weight: var(--weight-500);
@@ -549,8 +552,8 @@ td img {
   padding: 3px;
   /* test */
 
-  border: 1px solid steelblue;
-  color: steelblue;
+  border: 1px solid $color-secondary;
+  color: $color-secondary;
   margin-bottom: 1rem;
 }
 
@@ -624,7 +627,7 @@ td img {
 
 .checkout-btn {
   /* test */
-  background: steelblue;
+  background: $color-secondary;
   color: #fff;
   border-radius: 15px;
   padding: 1.2rem 3rem;
@@ -799,7 +802,7 @@ td img {
 }
 
 .newsletter-title {
-  color: var(--onyx);
+  color: $color-secondary;
   font-size: var(--fs-2);
   font-weight: var(--weight-600);
   margin-bottom: 10px;
@@ -1139,7 +1142,7 @@ td img {
 }
 
 .save_btn {
-  background: var(--bittersweet);
+  background: $color-secondary;
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -38,7 +38,7 @@
 
         &--description{
             .profile--name{
-                color: orange !important;
+                color: $color-primary !important;
                 font-size: 1.8rem;
                 color: black;
                 font-weight: 700;
@@ -102,6 +102,6 @@
 }
 
 .swiper-pagination-bullet-active {
-    background-color: black !important;
+    background-color: $color-primary !important;
     transform: scale(1.3);
 }

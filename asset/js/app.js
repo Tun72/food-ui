@@ -11,6 +11,7 @@ const alertText = document.querySelector(".alert-text");
 const categoriesList = document.querySelector(".categories-list");
 const btnCategories = document.querySelector(".btn-categories");
 const sortBtn = document.querySelector(".btn-sort");
+const url = 'https://food-recipe-admin-server-ae75c769cee1.herokuapp.com'
 
 const closeModal = function () {
   modal.classList.add("hidden");
@@ -226,7 +227,7 @@ const renderIngredients = async function (ingredients) {
   const token = localStorage.getItem("token") || null;
   try {
     const result = await fetch(
-      `http://localhost:4000/api/ingredients/check-by-name`,
+      `${url}/api/ingredients/check-by-name`,
       {
         method: "POST",
         headers: {

@@ -120,7 +120,7 @@
       position: absolute;
       top: 1.5rem;
       left: 1.5rem;
-      background: var(--ocean-green);
+      background: $color-primary;
       font-size: var(--fs-8);
       font-weight: var(--weight-500);
       color: var(--white);
@@ -171,7 +171,7 @@
   }
 
   .product-grid .btn-action:hover {
-      background: var(--eerie-black);
+      background: $color-secondary;
       color: var(--white);
       border-color: var(--eerie-black);
   }
@@ -194,9 +194,9 @@
   }
 
   .product-grid .showcase-category {
-      color: var(--salmon-pink);
+      color: $color-secondary;
       font-size: var(--fs-9);
-      font-weight: var(--weight-500);
+      font-weight: 600;
       text-transform: uppercase;
       margin-bottom: 1rem;
   }
@@ -218,7 +218,7 @@
 
   .product-grid .showcase-rating {
       display: flex;
-      color: var(--sandy-brown);
+      color: $color-primary;
       margin-bottom: 1rem;
 
       font-size: 2rem;
@@ -238,4 +238,15 @@
 
   .product-grid del {
       color: var(--sonic-silver);
+  }
+
+  .category{
+    background-color: $color-primary!important;
+    padding: 2px 15px;
+  }
+
+  .pagination{
+    button{
+        background-color: $color-secondary!important;
+    }
   }

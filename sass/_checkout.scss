@@ -11,7 +11,7 @@ fieldset {
 
 .button {
     align-items: center;
-    background-color: steelblue;
+    background-color: $color-primary;
     border-radius: 999em;
     color: #fff;
     display: flex;
@@ -23,9 +23,8 @@ fieldset {
     font-size: 1.2rem;
 }
 
-.button:focus,
 .button:hover {
-    background-color: #e96363;
+    background-color: rgb(21, 140, 106);
 }
 
 .button--full {
@@ -165,7 +164,7 @@ fieldset {
 
 .checkout-title {
     // test
-    color: steelblue;
+    color: $color-primary;
 }
 
 .order-success {

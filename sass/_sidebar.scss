@@ -49,11 +49,13 @@
   font-weight: var(--weight-600);
   margin-bottom: $margin-bottom-sm;
   margin-left: 0.5rem;
-  background: orange;
+  background: $color-primary;
   color: #fff;
-  padding: 0.5rem;
+  // padding: 0.5rem;
   border-radius: 10px;
   letter-spacing: 1px;
+  padding: 1rem;
+  padding-left: 20px;
 }
 
 .sidebar-close-btn {
