@@ -100,7 +100,7 @@ body::after{
 }
 
 .contact-info-content h4{
-    color: rgb(101, 232, 123);
+    color: #0de39d;
     font-size: 1.4em;
     margin-bottom: 5px;
     
@@ -124,11 +124,15 @@ body::after{
 
 }
 
+.container h2{
+    color: #0de39d;
+}
+
 .contact-form h2{
     font-weight: bold;
     font-size: 2em;
     margin-bottom: 20px;
-    color: rgb(225, 81, 81);
+    color: #0de39d;
 }
 
 .contact-form .input-box{
@@ -144,7 +148,7 @@ body::after{
     padding: 5px 10px;
     font-size: 16px;
     border: none;
-    border-bottom: 2px solid brown;
+    border-bottom: 2px solid #590c79;
     outline: none;
     resize: none;
 
@@ -159,7 +163,8 @@ body::after{
     margin: 10px 0;
     pointer-events: none;
     transition: 0.5s;
-    color: brown;
+    color: #0de39d;
+    opacity: 0.5;
 
 }
 
@@ -195,7 +200,7 @@ body::after{
 
 .btn {
 
-    background: #e0722dc6;
+    background: #0de39d;
     border: none;
     padding: 8px 16px;
     cursor: pointer;
@@ -208,3 +213,26 @@ body::after{
    
 }
 
+.btn-reverse{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0de39d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+}
+
+.btn-reverse a{
+    text-decoration: none;
+    color: white;
+    margin: 0;
+}
+
+.btn-reverse a i{
+    font-size: 25px;
+}

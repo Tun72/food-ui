@@ -1,11 +1,12 @@
-const header = document.querySelector(".nav-stick");
-const navbar = document.querySelector(".header-main")
+const header = document.querySelector(".header");
+const navbar = document.querySelector(".header-nav");
 
 const navHeight = navbar.getBoundingClientRect().height;
 
 
 const stickyNav = function (entries, observer) {
   const [entry] = entries;
+  console.log('woek');
   if (!entry.isIntersecting) navbar.classList.add('sticky')
   else navbar.classList.remove('sticky');
 }

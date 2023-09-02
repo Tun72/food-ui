@@ -66,9 +66,12 @@
     }
 }
 
-.sticky {
-    background: #ffffff73;
+.header-nav.sticky {
+    position: fixed;
+    background-color: #ffffff95;
     width: 100%;
+    backdrop-filter: blur(5px);
+    z-index: 2000;
 }
 
 .secondary__heading {
@@ -371,7 +374,7 @@
 
     .btn {
         // test
-        background: linear-gradient(to right, #f69425, #f39f3fd4);
+        background: $color-primary;
         padding: 0.5rem 2rem;
         font-size: 1.6rem;
         color: #fff;

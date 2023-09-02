@@ -8,7 +8,7 @@
 
         // test
         // background: red;
-        border-right: 1px solid var(--onyx);
+        border-right: 1px solid black;
 
 
         display: flex;
@@ -44,7 +44,7 @@
     &__photo {
         width: 10rem;
         height: 10rem;
-        background: #000;
+        background: $color-primary ;
         border-radius: 50%;
 
         display: flex;
@@ -73,7 +73,7 @@
 
     &__header {
         padding: 2rem;
-        border-bottom: 1px solid var(--onyx);
+        border-bottom: 1px solid black;
         // background: green;
         text-align: center;
 
@@ -88,7 +88,7 @@
     &__title {
         font-size: 2rem;
         font-weight: 600;
-
+        color: $color-primary;
 
     }
 
@@ -121,7 +121,7 @@
 
             width: 94%;
             // border: none;
-            border: 1px solid var(--onyx);
+            border: 1px solid black;
             outline: none;
             padding: 1rem 3rem;
 
@@ -154,7 +154,7 @@
         border: none;
         outline: none;
         font-size: 1.34rem;
-        background: #000;
+        background: $color-primary;
         color: #fff;
 
     }

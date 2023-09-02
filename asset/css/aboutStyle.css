@@ -1,3 +1,7 @@
+:root{
+    --primary : #0de39d;
+    --secondary : #590c79; 
+}
 body{
     margin: 0;
     padding: 0;
@@ -40,6 +44,7 @@ body{
     height: 250px;
     margin: 20px 10px 10px 10px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
   
 }
 .profile-content{
@@ -47,20 +52,24 @@ body{
     
 }
 img{
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 150px;
 
 }
 .profile-image{
     text-align: center;
+   
 
+}
+.profile-image img{
+    object-fit: cover;
 }
 .desc{
     text-align: center;
 }
 .desc h2{
-    color: aqua;
+    color: var(--secondary);
     font-size: 20px;
 
 }
@@ -75,17 +84,53 @@ img{
     text-align: center;
 }
 .btn{
-    background-color: aquamarine;
+    background-color: var(--secondary);
     color: #ffffff;
-    width: 150px;
+    width: 40px;
     cursor: pointer;
-    height: 38px;
+    height: 40px;
     font-size: 13px;
     font-family: 600px;
-    box-shadow: 3px 3px 3px 3px cyan;
-    border-radius: 3px;
+    margin: 0 5px 0 5px;
+    border-radius: 50%;
     outline: none;
     border: none;
     text-transform: uppercase;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.btn i{
+    font-size: 1.5rem;
+    color: white;
+}
 
+.back-btn{
+    width: 200px;
+    height: 200px;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.btn-reverse{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #590c79;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-reverse a{
+    text-decoration: none;
+    color: white;
+    margin: 0;
+}
+
+.btn-reverse a i{
+    font-size: 25px;
 }

@@ -11,7 +11,7 @@ const alertText = document.querySelector(".alert-text");
 const categoriesList = document.querySelector(".categories-list");
 const btnCategories = document.querySelector(".btn-categories");
 const sortBtn = document.querySelector(".btn-sort");
-const url = 'https://food-recipe-admin-server-ae75c769cee1.herokuapp.com'
+const url = "https://food-recipe-admin-server-ae75c769cee1.herokuapp.com";
 
 const closeModal = function () {
   modal.classList.add("hidden");
@@ -226,17 +226,14 @@ const renderIngredients = async function (ingredients) {
   let data = null;
   const token = localStorage.getItem("token") || null;
   try {
-    const result = await fetch(
-      `${url}/api/ingredients/check-by-name`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ data: ingredients }),
-      }
-    );
+    const result = await fetch(`${url}/api/ingredients/check-by-name`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ data: ingredients }),
+    });
 
     data = await result.json();
   } catch (err) {
@@ -525,12 +522,18 @@ const getDataByHashId = async function (id) {
 
 const id = getParameter("id") || 0;
 const countryName = getParameter("name") || null;
+const searchName = getParameter("search") || null;
+
 if (id > 0) {
   getDataByHashId(id);
 }
 
 if (countryName) {
   getDataByCitizen(countryName);
+}
+
+if (searchName) {
+  getDataBySearch(searchName);
 }
 
 init();

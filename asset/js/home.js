@@ -12,6 +12,7 @@ const addToPost = async (country = "American") => {
     let foodData = (await food.json()).meals;
     foodData = foodData.slice(0, 8);
 
+
     foodData.forEach((food) => {
       myPostText += `<div class="meal__card">
             <img src="${food.strMealThumb}" alt="" />
@@ -19,7 +20,7 @@ const addToPost = async (country = "American") => {
               <h3 class="teartiary__heading">${food.strMeal}</h3>
               <div class="meal__info">
                 <p class="meal__type">${country}</p>
-                <a href="rescipeMainpage.html?name=${country}" class="meal__button">
+                <a href="rescipeMainpage.html?id=${food.idMeal}" class="meal__button">
                 <ion-icon name="fast-food-outline"></ion-icon>
                 </a>
               </div>
@@ -78,3 +79,7 @@ mealPost.addEventListener("animationend", function (e) {
 
 addToList();
 addToPost();
+
+document.querySelector(".header__form--go-button").addEventListener("click", function(e) {
+  window.location.href= `rescipeMainpage.html?search=${document.querySelector(".header__form--input").value}`
+})

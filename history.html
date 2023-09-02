@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>History</title>
     <link rel="stylesheet" href="./asset/css/styleDetail.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Playfair+Display:ital,wght@0,400;1,400;1,600&family=Qwitcher+Grypen:wght@400;700&family=Rubik:ital,wght@0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="modal">
@@ -18,25 +25,7 @@
           <div class="newsletter-header">
             <h3 class="newsletter-title">saved items</h3>
           </div>
-          <table class="save">
-            <tr>
-              <td>
-                <img src="./asset/images/products/jewellery-2.jpg" alt="" />
-              </td>
-              <td>Name</td>
-              <td>$1000</td>
-              <td>
-                <button class="save_btn">
-                  +<ion-icon name="cart-outline"></ion-icon>
-                </button>
-              </td>
-              <td>
-                <span class="icon"
-                  ><ion-icon name="trash-outline"></ion-icon
-                ></span>
-              </td>
-            </tr>
-          </table>
+          <table class="save"></table>
         </div>
       </div>
     </div>
@@ -50,7 +39,7 @@
         </button>
         <div class="newsletter">
           <div class="newsletter-header">
-            <h3 class="newsletter-title">Cart (4 item)</h3>
+            <h3 class="newsletter-title">Cart</h3>
           </div>
 
           <div class="cartAndCheck">
@@ -60,160 +49,7 @@
               </div>
               <div class="line"></div>
 
-              <div class="all-carts">
-                <div class="cart-card">
-                  <span class="cart-tag">Best Seller</span>
-                  <div class="cart-item">
-                    <div class="cart-detail">
-                      <img
-                        src="./asset/images/products/party-wear-1.jpg"
-                        alt=""
-                      />
-                      <div class="cart-name">
-                        <h3>name</h3>
-                        <span>100gram</span>
-                      </div>
-                    </div>
-                    <p class="cart-price">$400</p>
-                  </div>
-                  <div class="cart-buttons">
-                    <a href="#">Remove</a>
-
-                    <div class="quantity-field">
-                      <button
-                        class="value-button decrease-button"
-                        onclick="decreaseValue(this)"
-                        title="Azalt"
-                      >
-                        -
-                      </button>
-                      <div class="number">0</div>
-                      <button
-                        class="value-button increase-button"
-                        onclick="increaseValue(this, 5)"
-                        title="Arrtır"
-                      >
-                        +
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="line"></div>
-                <div class="cart-card">
-                  <span class="cart-tag">Best Seller</span>
-                  <div class="cart-item">
-                    <div class="cart-detail">
-                      <img
-                        src="./asset/images/products/party-wear-1.jpg"
-                        alt=""
-                      />
-                      <div class="cart-name">
-                        <h3>name</h3>
-                        <span>100gram</span>
-                      </div>
-                    </div>
-                    <p class="cart-price">$400</p>
-                  </div>
-                  <div class="cart-buttons">
-                    <a href="#">Remove</a>
-
-                    <div class="quantity-field">
-                      <button
-                        class="value-button decrease-button"
-                        onclick="decreaseValue(this)"
-                        title="Azalt"
-                      >
-                        -
-                      </button>
-                      <div class="number">0</div>
-                      <button
-                        class="value-button increase-button"
-                        onclick="increaseValue(this, 5)"
-                        title="Arrtır"
-                      >
-                        +
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="line"></div>
-                <div class="cart-card">
-                  <span class="cart-tag">Best Seller</span>
-                  <div class="cart-item">
-                    <div class="cart-detail">
-                      <img
-                        src="./asset/images/products/party-wear-1.jpg"
-                        alt=""
-                      />
-                      <div class="cart-name">
-                        <h3>name</h3>
-                        <span>100gram</span>
-                      </div>
-                    </div>
-                    <p class="cart-price">$400</p>
-                  </div>
-                  <div class="cart-buttons">
-                    <a href="#">Remove</a>
-
-                    <div class="quantity-field">
-                      <button
-                        class="value-button decrease-button"
-                        onclick="decreaseValue(this)"
-                        title="Azalt"
-                      >
-                        -
-                      </button>
-                      <div class="number">0</div>
-                      <button
-                        class="value-button increase-button"
-                        onclick="increaseValue(this, 5)"
-                        title="Arrtır"
-                      >
-                        +
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="line"></div>
-                <div class="cart-card">
-                  <span class="cart-tag">Best Seller</span>
-                  <div class="cart-item">
-                    <div class="cart-detail">
-                      <img
-                        src="./asset/images/products/party-wear-1.jpg"
-                        alt=""
-                      />
-                      <div class="cart-name">
-                        <h3>name</h3>
-                        <span>100gram</span>
-                      </div>
-                    </div>
-                    <p class="cart-price">$400</p>
-                  </div>
-                  <div class="cart-buttons">
-                    <a href="#">Remove</a>
-
-                    <div class="quantity-field">
-                      <button
-                        class="value-button decrease-button"
-                        onclick="decreaseValue(this)"
-                        title="Azalt"
-                      >
-                        -
-                      </button>
-                      <div class="number">0</div>
-                      <button
-                        class="value-button increase-button"
-                        onclick="increaseValue(this, 5)"
-                        title="Arrtır"
-                      >
-                        +
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="all-carts"></div>
             </div>
 
             <div class="checkout">
@@ -221,21 +57,12 @@
                 >Continue to checkout</a
               >
               <div class="line"></div>
-              <div class="checkout-detail">
-                <div class="checkout-total">
-                  <h4>Subtotal(4 items)</h4>
-                  <p>$400</p>
-                </div>
-                <div class="checkout-discount">
-                  <h4>Tax</h4>
-                  <p>$40</p>
-                </div>
+              <!-- <div class="checkout-detail">
+                <div class="checkout-total"></div>
+                <div class="checkout-discount"></div>
               </div>
-              <div class="line"></div>
-              <div class="checkout-overall">
-                <h4>Estimated total</h4>
-                <p class="price">$440</p>
-              </div>
+              <div class="line"></div> -->
+              <!-- <div class="checkout-overall">Total</div> -->
             </div>
           </div>
         </div>
@@ -245,7 +72,10 @@
     <header>
       <div class="header-main">
         <div class="header-container">
-          <a href="index.html" class="header-logo"> Some Logo </a>
+          <a href="index.html" class="header-logo">
+            <img src="./asset/images/icons/logos.png" alt="" />
+            Taste Of Home
+          </a>
 
           <nav class="desktop-navigation-menu">
             <div class="header-container">
@@ -263,45 +93,47 @@
                 </li>
 
                 <li class="menu-category">
-                  <a href="rescipeMainpage.html" class="menu-title">Pizza</a>
+                  <a href="#" class="menu-title">Asia</a>
 
                   <ul class="dropdown-list">
                     <li class="dropdown-item">
-                      <a href="#">Shirt</a>
+                      <a href="rescipeMainpage.html?name=Myanmar">Myanmar</a>
                     </li>
 
                     <li class="dropdown-item">
-                      <a href="#">Shorts & Jeans</a>
+                      <a href="rescipeMainpage.html?name=Thai">Thiland</a>
                     </li>
 
                     <li class="dropdown-item">
-                      <a href="#">Safety Shoes</a>
+                      <a href="rescipeMainpage.html?name=Japanese">Japanese</a>
                     </li>
 
                     <li class="dropdown-item">
-                      <a href="#">Wallet</a>
+                      <a href="rescipeMainpage.html?name=Malaysian"
+                        >Malaysian</a
+                      >
                     </li>
                   </ul>
                 </li>
 
                 <li class="menu-category">
-                  <a href="#" class="menu-title">Traditional</a>
+                  <a href="#" class="menu-title">Europe</a>
 
                   <ul class="dropdown-list">
                     <li class="dropdown-item">
-                      <a href="#">Clothes Perfume</a>
+                      <a href="rescipeMainpage.html?name=British">British</a>
                     </li>
 
                     <li class="dropdown-item">
-                      <a href="#">Deodorant</a>
+                      <a href="rescipeMainpage.html?name=French">French</a>
                     </li>
 
                     <li class="dropdown-item">
-                      <a href="#">Flower Fragrance</a>
+                      <a href="rescipeMainpage.html?name=Spanish">Spanish</a>
                     </li>
 
                     <li class="dropdown-item">
-                      <a href="#">Air Freshener</a>
+                      <a href="rescipeMainpage.html?name=Dush">Dush</a>
                     </li>
                   </ul>
                 </li>
@@ -309,22 +141,14 @@
                 <li class="menu-category">
                   <a href="history.html" class="menu-title">History</a>
                 </li>
-
-                <li class="menu-category">
-                  <a href="#" class="menu-title">About</a>
-                </li>
-
-                <li class="menu-category">
-                  <a href="#" class="menu-title">Contact</a>
-                </li>
               </ul>
             </div>
           </nav>
 
           <div class="header-user-actions">
             <!-- <a href="authenticate.html" class="action-btn"
-                ><ion-icon name="log-in-outline"></ion-icon
-              ></a> -->
+              ><ion-icon name="log-in-outline"></ion-icon
+            ></a> -->
 
             <div class="action-btn user-dropdown">
               <ion-icon name="person-outline" class="user-icon"></ion-icon>
@@ -339,12 +163,12 @@
               </ul>
             </div>
 
-            <a href="#" class="action-btn btn-popup">
+            <a href="#" class="action-btn btn-popup openSave">
               <ion-icon name="heart-outline"></ion-icon>
               <span class="count">0</span>
             </a>
 
-            <a href="#" class="action-btn btn-popup">
+            <a href="#" class="action-btn btn-popup openCart">
               <ion-icon name="bag-handle-outline"></ion-icon>
               <span class="count">0</span>
             </a>
@@ -360,12 +184,8 @@
         </section>
         <section class="table__body">
           <table>
-            <thead class="mytable__header">
-              
-            </thead>
-            <tbody class="mytable__body">
-              
-            </tbody>
+            <thead class="mytable__header"></thead>
+            <tbody class="mytable__body"></tbody>
           </table>
         </section>
       </main>
