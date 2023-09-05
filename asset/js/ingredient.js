@@ -22,32 +22,32 @@ const allIngredient = async (name = null, category = null) => {
 
   const items = JSON.parse(localStorage.getItem("save")) || [];
 
-  if (token) {
-    let page = localStorage.getItem("page") || 1;
-    let data;
+  // if (token) {
+  let page = localStorage.getItem("page") || 1;
+  let data;
 
-    if (name) {
-      data = await getIngredientByName(name);
-    } else if (category) {
-      data = await getIngredientByCategoryName(category);
-    } else {
-      data = await getIngredients(token, page);
+  if (name) {
+    data = await getIngredientByName(name);
+  } else if (category) {
+    data = await getIngredientByCategoryName(category);
+  } else {
+    data = await getIngredients(page);
+  }
+
+  ingredients = data.ingredients;
+
+  items.forEach((i) => {
+    const index = ingredients.findIndex((item) => item._id === i.id);
+    if (index > -1) {
+      ingredients[index].isSave = true;
     }
+  });
 
-    ingredients = data.ingredients;
-
-    items.forEach((i) => {
-      const index = ingredients.findIndex((item) => item._id === i.id);
-      if (index > -1) {
-        ingredients[index].isSave = true;
-      }
-    });
-
-    if (!ingredients.length) {
-      textStr += `<p>No items found </p>`;
-    }
-    ingredients.forEach((e) => {
-      textStr += ` <div class="showcase">
+  if (!ingredients.length) {
+    textStr += `<p>No items found </p>`;
+  }
+  ingredients.forEach((e) => {
+    textStr += ` <div class="showcase">
         <div class="showcase-banner">
           <img
             src="${e.imageUrl}"
@@ -75,8 +75,8 @@ const allIngredient = async (name = null, category = null) => {
               e.isSave ? "btn-active" : ""
             } saveItem">
               <input type="hidden" value="${e._id}#${e.imageUrl}#${e.name}#${
-        e.price
-      }" class="itemId"/>
+      e.price
+    }" class="itemId"/>
               <ion-icon name="heart-outline" class=""></ion-icon>
             </a>
 
@@ -112,13 +112,13 @@ const allIngredient = async (name = null, category = null) => {
           
         </div>
       </div>`;
-    });
+  });
 
-    productGrid.innerHTML = textStr;
-    pagination.innerHTML = btnText;
+  productGrid.innerHTML = textStr;
+  pagination.innerHTML = btnText;
 
-    if (!name && !category) {
-      btnText = `
+  if (!name && !category) {
+    btnText = `
     ${
       data.prevPage
         ? `<button class="btn btn-1">${data.prevPage}</button>`
@@ -128,12 +128,12 @@ const allIngredient = async (name = null, category = null) => {
       data.nextPage ? `<button class="btn btn-2">${data.nextPage}</button>` : ""
     }`;
 
-      pagination.insertAdjacentHTML("afterbegin", btnText);
-    }
-
-    textStr = "";
-    btnText = "";
+    pagination.insertAdjacentHTML("afterbegin", btnText);
   }
+
+  textStr = "";
+  btnText = "";
+  // }
 };
 
 const addToCategoryList = async () => {

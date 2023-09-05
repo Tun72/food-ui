@@ -1,4 +1,4 @@
-import { addToShipping, getTotalPrice, renderSpinner } from "./helper.js";
+import { addToShipping, getTotalPrice, renderSpinner, url } from "./helper.js";
 
 const shippingBill = document.querySelector(".shipping__bill");
 
@@ -49,7 +49,6 @@ document
 
     const shipData = await addToShipping(e.target);
     const isSuccess = shipData.message;
-    const shipDetail = shipData.shipping;
 
     if (isSuccess === "success") {
       document.querySelector(".checkout_bill").innerHTML = "";
@@ -60,7 +59,7 @@ document
         <div>
         <h2>Successfully Ordered</h2>
   
-        <a href="#">your recipes</a>
+        <a href="${url}/docs/${shipData.filePath}">your recipes</a>
       </div>
        </div>
       `

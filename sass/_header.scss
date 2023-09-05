@@ -619,7 +619,7 @@ td img {
 .checkout-btn {
   /* test */
   background: $color-secondary;
-  color: #fff;
+  color: #fff !important;
   border-radius: 15px;
   padding: 1.2rem 3rem;
   letter-spacing: 1px;
@@ -750,7 +750,7 @@ td img {
   background: var(--white);
   border-radius: var(--border-radius-md);
   overflow-y: scroll;
-  z-index: 2;
+  z-index: 200 !important;
   animation: scaleUp 0.5s ease-in-out 1s forwards;
 }
 
@@ -1139,14 +1139,14 @@ td img {
   justify-content: space-between;
   font-size: 2rem;
   padding: 0.5rem 1.5rem;
-  color: #fff;
+  color: #fff !important;
   border-radius: 1rem;
 }
 
 .header-nav{
   position: absolute;
   width: 100%;
-  z-index: 200;
+  z-index: 20;
   padding: 1.5rem 0;
 }
 

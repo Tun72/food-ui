@@ -4,11 +4,14 @@ const token = localStorage.getItem("token") || null;
 const userAction = document.querySelector(".user-dropdown");
 let text = ``;
 let isUser = false;
+let user;
 
 // check nav
 async function prepareNav() {
   if (token) {
-    isUser = await getUser(token) != null;
+
+    user = await getUser(token) || null;
+    isUser =  user != null;
   }
 
 
@@ -23,6 +26,7 @@ async function prepareNav() {
       <li class="user-item">
         <a href="userProfile.html">Account</a>
       </li>
+      ${user.user.role === 'admin' ? '<li class="user-item"><a href="http://localhost:4000/admin">Dashboard</a></li>' : ''}
     
       <li class="user-item">
         <a href="#" class="logout">Logout</a>

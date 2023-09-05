@@ -6,7 +6,7 @@ $temp-secondary-color: rgb(91, 212, 91);
   font-size: 2rem;
   font-weight: 700;
   padding: 1.8rem 5rem;
-  background-image: linear-gradient(180deg, $color-primary, white);
+  background-image: linear-gradient(180deg, $color-primary, #7cf358);
   display: inline-block;
   font-size: 2.5rem;
   font-weight: 700;
@@ -15,8 +15,6 @@ $temp-secondary-color: rgb(91, 212, 91);
   letter-spacing: 0.1rem;
   transform: skew(-8deg) rotate(-8deg);
 }
-
-
 
 
 .main-recipe {
@@ -493,7 +491,7 @@ $temp-secondary-color: rgb(91, 212, 91);
         &-left {
           width: 5rem;
           height: 5rem;
-          background-image: linear-gradient(180deg,  $color-primary, white);
+          background-image: linear-gradient(180deg,  $color-primary, #7cf358);
           border-radius: 50%;
           display: flex;
           justify-content: center;

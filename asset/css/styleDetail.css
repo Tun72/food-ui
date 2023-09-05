@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&family=Playfair+Display:ital,wght@0,400;1,400;1,600&family=Qwitcher+Grypen:wght@400;700&family=Rubik:ital,wght@0,600;0,700;1,400&display=swap");
 :root {
   /**
      * colors
@@ -436,6 +437,30 @@ input::placeholder {
 
 .see_btn {
   padding: 1rem 1.4rem !important; }
+
+.error_render {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .error_render img {
+    width: 5rem;
+    height: 5rem; }
+  .error_render p {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: red; }
+
+.disable-btn {
+  background: #580c7981 !important;
+  pointer-events: none; }
+
+.hover-white :hover {
+  color: #fff !important; }
+
+.hover-white:hover ::after {
+  background: #fff !important; }
 
 .nav-stick {
   background-color: #f8f8f850; }
@@ -917,7 +942,7 @@ td img {
 .checkout-btn {
   /* test */
   background: #590c79;
-  color: #fff;
+  color: #fff !important;
   border-radius: 15px;
   padding: 1.2rem 3rem;
   letter-spacing: 1px;
@@ -1024,7 +1049,7 @@ td img {
   background: var(--white);
   border-radius: var(--border-radius-md);
   overflow-y: scroll;
-  z-index: 2;
+  z-index: 200 !important;
   animation: scaleUp 0.5s ease-in-out 1s forwards; }
 
 @keyframes scaleUp {
@@ -1326,13 +1351,13 @@ td img {
   justify-content: space-between;
   font-size: 2rem;
   padding: 0.5rem 1.5rem;
-  color: #fff;
+  color: #fff !important;
   border-radius: 1rem; }
 
 .header-nav {
   position: absolute;
   width: 100%;
-  z-index: 200;
+  z-index: 20;
   padding: 1.5rem 0; }
 
 .header-main-nav {
@@ -2310,7 +2335,7 @@ fieldset {
       font-size: 2rem;
       font-weight: 700;
       padding: 1.8rem 5rem;
-      background-image: linear-gradient(180deg, #0de39d, white);
+      background-image: linear-gradient(180deg, #0de39d, #7cf358);
       display: inline-block;
       font-size: 2.5rem;
       font-weight: 700;
@@ -2325,7 +2350,7 @@ fieldset {
       font-size: 2rem;
       font-weight: 700;
       padding: 1.8rem 5rem;
-      background-image: linear-gradient(180deg, #0de39d, white);
+      background-image: linear-gradient(180deg, #0de39d, #7cf358);
       display: inline-block;
       font-size: 2.5rem;
       font-weight: 700;
@@ -2353,7 +2378,7 @@ fieldset {
       .main-recipe .recipe__modal--body .bookmark-left {
         width: 5rem;
         height: 5rem;
-        background-image: linear-gradient(180deg, #0de39d, white);
+        background-image: linear-gradient(180deg, #0de39d, #7cf358);
         border-radius: 50%;
         display: flex;
         justify-content: center;

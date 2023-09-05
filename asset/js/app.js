@@ -11,7 +11,7 @@ const alertText = document.querySelector(".alert-text");
 const categoriesList = document.querySelector(".categories-list");
 const btnCategories = document.querySelector(".btn-categories");
 const sortBtn = document.querySelector(".btn-sort");
-const url = "https://food-recipe-admin-server-ae75c769cee1.herokuapp.com";
+const url =  "https://food-recipe-admin-server-ae75c769cee1.herokuapp.com"; //"http://localhost:4000"; //
 
 const closeModal = function () {
   modal.classList.add("hidden");
@@ -43,21 +43,22 @@ const renderSpinner = function () {
 
 const setDefaultFlag = function () {
   const html = `
-        <div class="categories__slider--item"><img src="assets/myanmar.svg" alt="">
+        <div class="categories__slider--item" data-country="Myanmar"><img src="asset/images/myanmar.svg" alt="">
              <p>Myanmar</p>
          </div>
-
-        <div data-country="unknown" class="categories__slider--item"><img src="assets/unknown.png" alt="">
-            <p>Unknown</p>
-        </div>
     `;
   flagContainer.insertAdjacentHTML("beforeend", html);
+
+  // <div data-country="unknown" class="categories__slider--item"><img src="asset/unknown.png" alt="">
+  // <p>Unknown</p>
+  // </div>
 };
 
 //render Flag and country name
 
 const generateFlag = function (data, demonyms) {
   flagContainer.innerHTML = "";
+  setDefaultFlag();
 
   for (let con = 0; con < data.length; con++) {
     for (let dem = 0; dem < demonyms.length; dem++) {
@@ -77,7 +78,6 @@ const generateFlag = function (data, demonyms) {
   }
 
   //set External flag
-  setDefaultFlag();
 };
 
 //fetch related country by recipe
@@ -121,9 +121,13 @@ const getDataByCitizen = async function (name) {
 
     renderSpinner();
 
-    const info = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/filter.php?a=${name}`
-    );
+    let URL = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${name}`;
+
+    if (name === "Myanmar") {
+      URL = `${url}/api/recipes`;
+    }
+
+    const info = await fetch(URL);
 
     const data = await info.json();
 
@@ -173,7 +177,9 @@ const renderMarkupRecipe = function (item, name, sort = false) {
 const generateRecipeCard = function (meal, name = "") {
   let markup = `
     <div class="col-4">
-                 <div class="recipe__card" data-id="${meal.idMeal}">
+                 <div class="recipe__card" data-id="${
+                   meal.idMeal
+                 }" data-country="${name}">
                       <div class="recipe__card--img">
                           <img src="${meal.strMealThumb}" alt="">
                       </div>
@@ -203,7 +209,15 @@ const renderMarkupDetail = async function (data) {
     items.push(data[`strIngredient${i}`]);
     methods.push(data[`strMeasure${i}`]);
   }
-  const ingredient = items.filter((item) => item != "" && item != null);
+  let ingredient = items.map((item) => {
+    if (item != "" && item != null) {
+      let newItem = toTitleCase(item);
+      return newItem;
+    }
+  });
+
+  ingredient = ingredient.filter((item) => item )
+
   const measurement = methods.filter((method) => {
     return method != " " && method != "" && method != null;
   });
@@ -224,13 +238,11 @@ const renderMarkupDetail = async function (data) {
 
 const renderIngredients = async function (ingredients) {
   let data = null;
-  const token = localStorage.getItem("token") || null;
   try {
     const result = await fetch(`${url}/api/ingredients/check-by-name`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({ data: ingredients }),
     });
@@ -342,11 +354,13 @@ const getDataBySearch = async function (userInput) {
 };
 
 //fetch data by id
-const getDataById = async function (id) {
+const getDataById = async function (id, isMM = false) {
   try {
-    const info = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
-    );
+    let URL = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
+    if (isMM) {
+      URL = `${url}/api/recipes/${id}`;
+    }
+    const info = await fetch(URL);
     if (!info.ok) {
       throw new Error(info.status + " ,Not found the data");
     }
@@ -472,7 +486,10 @@ recipeContainer.addEventListener("click", function (e) {
   if (!recipeCard) return;
   openModal();
   const id = recipeCard.getAttribute("data-id");
-  getDataById(id);
+  const isMM = recipeCard.getAttribute("data-country") === "Myanmar";
+
+  console.log(id);
+  getDataById(id, isMM);
 });
 
 modal.addEventListener("click", function (e) {
@@ -519,6 +536,16 @@ const getDataByHashId = async function (id) {
     renderError();
   }
 };
+
+function toTitleCase(str) {
+  str = str.toLowerCase().split(" ");
+  for (var i = 0; i < str.length; i++) {
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+  }
+
+  console.log(str);
+  return str.join(" ");
+}
 
 const id = getParameter("id") || 0;
 const countryName = getParameter("name") || null;

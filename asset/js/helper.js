@@ -1,7 +1,8 @@
 const token = localStorage.getItem("token") || null;
+
 let body = document.querySelector("body");
 
-export const url = "https://food-recipe-admin-server-ae75c769cee1.herokuapp.com" // "http://localhost:4000" // 
+export const url =  "https://food-recipe-admin-server-ae75c769cee1.herokuapp.com" //"http://localhost:4000"; //
 // Fetch
 export async function getUser(token) {
   const result = await fetch(`${url}/api/user`, {
@@ -17,19 +18,16 @@ export async function getUser(token) {
   return data;
 }
 
-export async function getIngredients(token, page) {
-  const result = await fetch(
-    `${url}/api/ingredients?page=${page}`,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
+export async function getIngredients(page) {
+  const result = await fetch(`${url}/api/ingredients?page=${page}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 
   const data = (await result.json()) || null;
+
   return data;
 }
 
@@ -40,7 +38,6 @@ export async function getIngredientById(id) {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
       },
     });
 
@@ -61,7 +58,6 @@ export async function getIngredientByName(name) {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
         },
       }
     );
@@ -74,22 +70,18 @@ export async function getIngredientByName(name) {
   return data;
 }
 
-
 export async function getIngredientCategory() {
   let data = null;
   try {
-    const result = await fetch(
-      `${url}/api/ingredients/ingredient-category`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
+    const result = await fetch(`${url}/api/ingredients/ingredient-category`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
     data = await result.json();
+    console.log(data);
   } catch (err) {
     console.log(err);
   }
@@ -106,7 +98,6 @@ export async function getIngredientByCategoryName(category) {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
         },
       }
     );
@@ -122,17 +113,14 @@ export async function getIngredientByCategoryName(category) {
 export async function addToCart(id, quantity = 1) {
   let data = false;
   try {
-    const result = await fetch(
-      `${url}/api/ingredients/add-to-cart`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ id, quantity }),
-      }
-    );
+    const result = await fetch(`${url}/api/ingredients/add-to-cart`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ id, quantity }),
+    });
     data = (await result.json()).message === "success";
   } catch (err) {
     console.log(err);
@@ -144,16 +132,13 @@ export async function addToCart(id, quantity = 1) {
 async function getCart(id) {
   let data = false;
   try {
-    const result = await fetch(
-      `${url}/api/ingredients/add-to-cart`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
+    const result = await fetch(`${url}/api/ingredients/add-to-cart`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
 
     data = await result.json();
   } catch (err) {
@@ -166,17 +151,14 @@ async function getCart(id) {
 export async function deleteCart(id) {
   let data = false;
   try {
-    const result = await fetch(
-      `${url}/api/ingredients/delete-cart`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ id}),
-      }
-    );
+    const result = await fetch(`${url}/api/ingredients/delete-cart`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ id }),
+    });
 
     data = await result.json();
   } catch (err) {
@@ -186,12 +168,8 @@ export async function deleteCart(id) {
   return data;
 }
 
-
-
 ////////////////////////////////////////////////
-
 // Updated Fetch //
-
 export async function fetchGetMethod(url) {
   let data = null;
   try {
@@ -231,9 +209,7 @@ export async function fetchPostMethod(url, inp_data) {
   return data;
 }
 
-
 // cart and Save
-
 export async function listenSaveAndCart() {
   const productGrid = document.querySelector(".product-grid");
   productGrid.addEventListener("click", async function (e) {
@@ -260,27 +236,30 @@ export async function listenSaveAndCart() {
             price: value[3],
           },
         ];
-        addShortPopup("Successfully Save");
+        addShortPopup("Successfully Save", "success");
       } else {
         data = data.filter((d) => d.id != value[0]);
         save.classList.remove("btn-active");
-        addShortPopup("Successfully Remove");
+        addShortPopup("Successfully Remove", "success");
       }
 
       localStorage.setItem("save", JSON.stringify(data));
       checkSave();
     } else if (cart) {
+      if (!token) {
+        addShortPopup("Please Login !", "fail");
+        return;
+      }
       let isAdded = await addToCart(cart.querySelector(".itemId").value);
 
       if (isAdded) {
-        addShortPopup("Successfully Add To Cart");
+        addShortPopup("Successfully Add To Cart", "success");
       } else {
-        addShortPopup("Error occour");
+        addShortPopup("Error occour", "success");
       }
       await checkCart(
         +document.querySelector(".openCart").children[1].innerText + 1
       );
-
     } else if (detil) {
       window.location.href = detil.href;
     }
@@ -327,8 +306,20 @@ export function showSave() {
 
 export async function showCart() {
   document.querySelector(".all-carts").innerHTML = "";
+
+  if (!token) {
+
+    // 
+  
+    document.querySelector(".all-carts").innerHTML = renderError("Login First");
+    document.querySelector(".checkout-btn").classList.add("disable-btn");
+
+    console.log(document.querySelector(".checkout-btn"));
+    return
+  }
   checkCart();
   renderSpinner(document.querySelector(".all-carts"));
+  document.querySelector(".checkout-btn").classList.remove("disable-btn");
 
   let carts = (await getCart()).carts;
   let text = "",
@@ -445,22 +436,19 @@ export async function addToShipping(data) {
   const [city, address, zip] = data;
 
   try {
-    const result = await fetch(
-      `${url}/api/ingredients/add-to-shipping`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          city: city.value,
-          address: address.value,
-          zip: zip.value,
-          payment: "Cash On Delivery",
-        }),
-      }
-    );
+    const result = await fetch(`${url}/api/ingredients/add-to-shipping`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        city: city.value,
+        address: address.value,
+        zip: zip.value,
+        payment: "Cash On Delivery",
+      }),
+    });
     data = await result.json();
   } catch (err) {
     console.log(err);
@@ -486,6 +474,12 @@ export async function checkCart(tot = null) {
 
 ///////////////////////////////
 
+export const renderError = function (message) {
+  return `<div class="error_render">
+  <img src="./asset/images/Error.webp" alt="" />
+  <p>${message}</p>
+</div>`;
+};
 // components
 export const renderSpinner = function (html) {
   const markup = `
@@ -497,10 +491,14 @@ export const renderSpinner = function (html) {
   html.insertAdjacentHTML("afterbegin", markup);
 };
 
-export function addShortPopup(msg) {
+export function addShortPopup(msg, status) {
+  let img = "correct.png";
+  if (status == "fail") {
+    img = "Error.webp";
+  }
   let body = document.querySelector("body");
   let text = `<div class="running_pop active">
-  <img src="./asset/images/correct.png" alt="" />
+  <img src="./asset/images/${img}" alt="" />
   <p>${msg}</p>
   <span class="close">X</span>
 </div>`;
@@ -511,8 +509,6 @@ export function addShortPopup(msg) {
 
 export function removePopup() {
   body.removeChild(document.querySelector(".running_pop"));
-
 }
-
 
 ///////////////////////////////////////
