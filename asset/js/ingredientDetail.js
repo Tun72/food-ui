@@ -73,18 +73,6 @@ async function ingredientDetail() {
         </ul>
       </div>
       <div class="line"></div>
-      <div class="detail-box__add">
-        <span class="detail-box__add-1"
-          ><a href="#"
-            ><i class="ri-heart-line"></i>Add to list</a
-          ></span
-        >
-        <span class="detail-box__add-2"
-          ><a href="#"
-            ><i class="ri-gift-line"></i>Add to registry</a
-          ></span
-        >
-      </div>
     </div>
     <div class="detail-box box-1">
       <div class="detail-box__img">
@@ -171,6 +159,8 @@ document
   });
 
 renderSpinner(detail);
+
+
 
 await ingredientDetail();
 await addToSimilar();

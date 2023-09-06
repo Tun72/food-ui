@@ -62,7 +62,7 @@ const allIngredient = async (name = null, category = null) => {
             class="product-img hover"
           />
 
-          <p class="showcase-badge">15%</p>
+          <p class="showcase-badge">${Math.round(Math.random() * 20)}%</p>
 
           <div class="showcase-actions">
             <a href="ingredientDetail.html?id=${
@@ -106,7 +106,9 @@ const allIngredient = async (name = null, category = null) => {
           
           <div class="price-box">
             <p class="price">$${e.price}</p>
-            <del>$75.00</del>
+            <del>$${((Math.round(Math.random() * 5) + 3) * e.price).toFixed(
+              2
+            )}</del>
             <span class="category">${e.category}</span>
           </div>
           
@@ -217,6 +219,34 @@ function clearPage() {
 
 setTimeout(clearPage, 10000);
 
+function generatePopup() {
+  const data = [
+    { name: "water", id: "64d3333883a3802cbd08c924" },
+    { name: "fish", id: "64d0ff6d138a0f2b6a7f0d84" },
+    { name: "beef", id: "64d24c2683a3802cbd08c7d4" },
+    { name: "peanuts", id: "64ca788babaceba090cff163" },
+  ];
+  const random = Math.round(Math.random() * 2);
+  document.querySelector(".mypopup").textContent = "";
+  document.querySelector(".mypopup").insertAdjacentHTML(
+    "afterbegin",
+    `<img src="./asset/imgs/${data[random].name}.webp" alt="" />
+    <a href="ingredientDetail.html?id=${data[random].id}"> 
+    <div class="mypopup-detail">
+      <h2 class="mypopup-title">New Discount</h2>
+      <p class="mypopup-name">${data[random].name}</p>
+      <span class="mypopup-discount">20% discount only $10</span>
+    </div></a>`
+  );
+}
+
+setTimeout(generatePopup, 16000);
+
+document.querySelector(".mycontact").addEventListener("click", function(e) {
+  document.querySelector(".wrapper").classList.toggle("show-chart");
+})
+
 allIngredient();
 addToCategoryList();
 listenSaveAndCart();
+generatePopup();

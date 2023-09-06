@@ -11,7 +11,9 @@ const alertText = document.querySelector(".alert-text");
 const categoriesList = document.querySelector(".categories-list");
 const btnCategories = document.querySelector(".btn-categories");
 const sortBtn = document.querySelector(".btn-sort");
-const url =  "https://food-recipe-admin-server-ae75c769cee1.herokuapp.com"; //"http://localhost:4000"; //
+const recipeVideo = document.querySelector(".recipe__video");
+let link = '';
+const url = "https://food-recipe-admin-server-ae75c769cee1.herokuapp.com"; //"http://localhost:4000"; //
 
 const closeModal = function () {
   modal.classList.add("hidden");
@@ -37,6 +39,15 @@ const renderSpinner = function () {
      </div>
     `;
   recipeContainer.insertAdjacentHTML("afterbegin", markup);
+};
+const renderSpinner_ = function (html) {
+  const markup = `
+  <div class="recipe__spinner">
+       <span class="loader"></span>
+       <div><h4 class="loading-text">Loading...</h4></div>
+   </div>
+  `;
+  html.insertAdjacentHTML("afterbegin", markup);
 };
 
 //include country
@@ -186,7 +197,7 @@ const generateRecipeCard = function (meal, name = "") {
                      <div class="recipe__card--body">
                          <h4>${meal.strMeal}<h4>
                          <span class="card-icon"><i class="fa-solid fa-star"></i></span>
-                         <span class="card-rating-text">4.5</span>
+                         <span class="card-rating-text">${Math.round(((Math.random() * 5) + 3) * 10) /10 }</span>
                          <span class="card-menu-text">. ${
                            meal.strCategory ?? name
                          }</span>
@@ -216,7 +227,7 @@ const renderMarkupDetail = async function (data) {
     }
   });
 
-  ingredient = ingredient.filter((item) => item )
+  ingredient = ingredient.filter((item) => item);
 
   const measurement = methods.filter((method) => {
     return method != " " && method != "" && method != null;
@@ -229,10 +240,14 @@ const renderMarkupDetail = async function (data) {
     measure: measurement,
     ingredients: ingredient,
     instruction: data.strInstructions,
+    vlink : data.strYoutube
+
   };
 
-  const markup = await generateMarkupDetail(objRecipe);
+  renderSpinner_(modal);
 
+  const markup = await generateMarkupDetail(objRecipe);
+  modal.textContent = "";
   modal.insertAdjacentHTML("afterbegin", markup);
 };
 
@@ -261,8 +276,17 @@ const generateMarkupDetail = async function ({
   measure,
   ingredients,
   instruction,
+  vlink 
 }) {
   let html = "";
+  
+  console.log(vlink);
+  if(citizen == "Myanmar") {
+    link = vlink;
+  } else {
+    // link = "https://www.youtube.com/watch?v=4aZr5hZXP_s"
+    link = "https://www.youtube.com/embed/" + vlink.split("=")[1];
+  }
   html += `
     <button class="recipe__exit"><i class="fa fa-times" aria-hidden="true"></i>
     </button>
@@ -278,14 +302,15 @@ const generateMarkupDetail = async function ({
               <span><i class="fa-solid fa-ruler"></i>   ${measure.length}  Measurement</span>
               <span><i class="fa-solid fa-book-open"></i>      ${ingredients.length}  Ingredients</span>
             </div>
+
             <div class="bookmark-left">
-              <i class="fa-solid fa-bookmark"></i>
+             <i class="fas fa-play"></i>
             </div>
           </div>
           <hr>
   
           <div class="recipe-ingredient">
-            <h6>Recipe IngredientS</h6>
+            <h6>Recipe Ingredients</h6>
             <div class="row mt-4">
         `;
 
@@ -314,14 +339,6 @@ const generateMarkupDetail = async function ({
     </div>`;
   });
 
-  html += ` </div>
-  
-    <div class="recipe-btn text-center">
-      <button class="btn">Download</button>
-    </div>
-  </div>`;
-
-  console.log(data);
   return html;
 };
 
@@ -427,6 +444,18 @@ const renderCategories = function (data) {
   categoriesList.insertAdjacentHTML("beforeend", markup);
 };
 
+const renderIframe = function (link) {
+  return`<iframe
+  width="800"
+  height="500"
+  src="${link}"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>`;
+};
+
 const generateMarkupCategories = function (text) {
   return `
     <li class="categories-list-item" data-name="${text}">
@@ -465,6 +494,7 @@ const getDataByCategories = async function (name) {
   }
 };
 
+
 categoriesList.addEventListener("click", function (e) {
   const item = e.target.closest(".categories-list-item");
   if (!item) return;
@@ -488,12 +518,21 @@ recipeContainer.addEventListener("click", function (e) {
   const id = recipeCard.getAttribute("data-id");
   const isMM = recipeCard.getAttribute("data-country") === "Myanmar";
 
-  console.log(id);
   getDataById(id, isMM);
 });
 
-modal.addEventListener("click", function (e) {
+modal.addEventListener("click", async function (e) {
   if (e.target.closest(".recipe__exit")) {
+    closeModal();
+    modal.textContent = ""
+  }
+
+  if (e.target.closest(".bookmark-left")) {
+    recipeVideo.classList.remove("hidden");
+  
+    
+
+    recipeVideo.insertAdjacentHTML("afterbegin", renderIframe(link))
     closeModal();
   }
 });
@@ -511,8 +550,19 @@ search.addEventListener("submit", function (e) {
   getDataBySearch(input);
 });
 
+document
+  .querySelector(".recipe__video")
+  .addEventListener("click", function (e) {
+    this.classList.add("hidden");
+    recipeVideo.textContent = ""
+    openModal();
+  });
+
 function init() {
-  overlay.addEventListener("click", closeModal);
+  overlay.addEventListener("click", function(){
+    closeModal();
+    modal.textContent = "";
+  });
 
   getFlag();
   getCategories();

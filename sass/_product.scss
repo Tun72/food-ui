@@ -241,8 +241,11 @@
   }
 
   .category{
-    background-color: $color-primary!important;
+    background-color: transparent;
     padding: 2px 15px;
+    border: 1px solid $color-primary;
+    pointer-events: none;
+    font-weight: 500;
   }
 
   .pagination{

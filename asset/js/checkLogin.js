@@ -26,7 +26,7 @@ async function prepareNav() {
       <li class="user-item">
         <a href="userProfile.html">Account</a>
       </li>
-      ${user.user.role === 'admin' ? '<li class="user-item"><a href="http://localhost:4000/admin">Dashboard</a></li>' : ''}
+      ${user.user.role === 'admin' ? '<li class="user-item"><a href="http://localhost:4000/admin" target="_blank">Dashboard</a></li>' : ''}
     
       <li class="user-item">
         <a href="#" class="logout">Logout</a>

@@ -173,7 +173,7 @@
 
     &-name {
         font-size: 2rem;
-        color: var(--color-primary);
+        color: $color-primary !important;
     }
 
     &-discount {
@@ -277,8 +277,7 @@
 
 .category {
     font-size: 1.2rem;
-    color: #fff;
-    background: orange;
+    color: $color-primary;
     padding: 3px;
 }
 
@@ -471,4 +470,116 @@
 }
 .hover-white:hover ::after {
     background: #fff !important;
+}
+
+
+.footer__info {
+    a {
+        color: #fff !important;
+    }
+}
+
+.up-popup {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+    animation: bounce2 2s ease infinite;
+    cursor: pointer;
+
+    a {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+}
+
+
+@keyframes bounce2 {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+
+.wrapper {
+    position: fixed;
+    right: 7rem;
+    bottom: 10rem;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+    z-index: -1;
+
+    padding: 2rem;
+    font-size: 1.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    gap: 20px;
+    opacity: 0;
+
+    box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+    color: $color-primary;
+}
+
+
+.show-chart {
+    opacity: 1;
+    bottom: 15rem;
+    z-index: 300;
+}
+
+.chat-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 5px;
+    width: 90%;
+}
+
+.chat-form input,
+textarea {
+    margin-bottom: 10px
+}
+
+.chat-form textarea,.chat-form input {
+    width: 100%;
+    padding: 1rem 0;
+    border: none;
+    outline: none;
+    border-bottom:2px solid #333 ;
+    background: transparent;
+}
+
+.btn,
+.btn:focus,
+.btn:hover {
+    background-color: $color-primary;
+    border: none;
+    align-self: flex-end;
+    color: #fff;
+    margin-top: 1rem;
+    padding: 1rem 1.4rem;
+}
+
+#check {
+    display: none !important
+}
+
+.food_svg {
+    fill: $color-secondary;
 }

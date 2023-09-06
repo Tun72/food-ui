@@ -1,4 +1,4 @@
-import { addShortPopup, fetchPostMethod, getUser } from "./helper.js";
+import { addShortPopup, fetchPostMethod, getUser, url } from "./helper.js";
 
 const profileForm = document.querySelector(".profile__forms");
 const navDetail = document.querySelector(".profile__nav-detail");

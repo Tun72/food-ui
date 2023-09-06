@@ -30,6 +30,7 @@ $temp-secondary-color: rgb(91, 212, 91);
 
     &-left {
       padding: 0 60px !important;
+ 
 
       .btn-sort {
         margin-left: 2rem;
@@ -499,6 +500,7 @@ $temp-secondary-color: rgb(91, 212, 91);
           color: white;
           font-size: 2.4rem;
           font-weight: 700;
+          cursor: pointer;
         }
       }
 
@@ -636,6 +638,29 @@ $temp-secondary-color: rgb(91, 212, 91);
           }
         }
       }
+    }
+
+  }
+
+  .recipe__video {
+    z-index: 2000;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: #33333358;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    iframe {
+      border-radius: 20px;
+      box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+
     }
 
   }

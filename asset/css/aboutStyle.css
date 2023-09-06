@@ -134,3 +134,8 @@ img{
 .btn-reverse a i{
     font-size: 25px;
 }
+
+a {
+    text-decoration: none;
+    
+}

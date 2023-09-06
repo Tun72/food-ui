@@ -58,6 +58,9 @@ const addToList = async () => {
 
 mealSection.addEventListener("click", function (e) {
   e.preventDefault();
+  if(e.target.classList.contains("meal__all")) {
+    window.location.href = e.target.href;
+  }
   if (e.target.classList.contains("meal__link")) {
     mealPost.classList.add("meal__effect");
     // e.target.classList.add("meal__link-active");

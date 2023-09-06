@@ -40,14 +40,14 @@ async function getHistory() {
 
   history.forEach((e, i) => {
     trText += `<tr>
-    <td>${i}</td>
+    <td>${e._id}</td>
     <td class="col col-4" data-label="Quantity">${e.totalQty}</td>
     <td class="col col-4" data-label="Price">$${e.totalPrice}</td>
-    <td class="col col-4" data-label="Address">${e.userId.address}</td>
+    <td class="col col-4" data-label="Address">${e.userId.address || "Yangon"}</td>
     <td class="col col-4" data-label="Payment">Cash On Devery</td>
-    <td class="col col-4" data-label="Status"><p class="status delivered">Pending</p></td>
+    <td class="col col-4" data-label="Status"><p class="status ${e.status == 'Success' ? 'delivered': e.status == 'Pending' ? 'pending': ''}">${e.status}</p></td>
     <td class="col col-4" data-label="Recipes">
-      <a href="#">recipe</a>
+      <a href="${url}/docs/${e.filePath}">recipe</a>
     </td> </tr>`;
   });
 
